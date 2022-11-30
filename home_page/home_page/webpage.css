@@ -1,0 +1,126 @@
+@font-face {
+    font-family: "OpenSansBold";
+    src: url(../font/OpenSans-Bold.ttf);
+}
+
+@font-face {
+    font-family: "OpenSansLight";
+    src: url(../font/OpenSans-Light.ttf);
+}
+
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url(../font/OpenSans-Regular.ttf);
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #fcedda;
+}
+
+.title{
+    margin-top: 100px;
+    height: 140px;
+    color: #ee4e34;
+    font-size: 50px;
+    font-family: "OpenSansBold";
+    line-height: 140px;
+    text-align: center;
+}
+
+.main>div{
+    width: 300px;
+    height: 300px;
+    background-color:#ee4e34;
+    border-radius: 20%;
+    float: left;
+}
+
+.main1,.main4{
+    margin-left: 250px;
+}
+
+.main2,.main3,.main5,.main6{
+    margin-left: 150px;
+}
+
+.main1,.main2,.main3{
+    margin-bottom: 50px;
+}
+
+.main>div>div{
+    width: 300px;
+    height: 150px;
+    color: #fcedda;
+    font-size: 29px;
+    font-family: "OpenSansBold";
+    text-align: center;;
+    box-sizing: border-box;
+    padding-top: 50px;
+}
+
+.main>div>span{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    float: right;
+    border-radius: 100% 0 20% 0;
+    background-repeat: no-repeat;
+}
+
+.span1{
+    background-color: #d8ff2b;
+    background-image: url(../smart_images/span1.png);
+    background-size: 100px 100px;
+    background-position: 100% 75%;
+}
+
+.span2{
+    background-color: #e456f6;
+    background-image: url(../smart_images/span2.png);
+    background-size: 100px 100px;
+    background-position: 90% 75%;
+}
+
+.span3{
+    background-color: #9daaf2;
+    background-image: url(../smart_images/span3.png);
+    background-size: 100px 100px;
+    background-position: 100% 75%;
+}
+
+.span4{
+    background-color: #088b2b;
+    background-image: url(../smart_images/span4.png);
+    background-size: 100px 100px;
+    background-position: 90% 75%;
+}
+
+.span5{
+    background-color: #17f2e3;
+    background-image: url(../smart_images/span5.png);
+    background-size: 120px 120px;
+    background-position: 100% 100%;
+}
+
+.a1{
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+    float: right;
+    border-radius: 100% 0 20% 0;
+    background-repeat: no-repeat;
+    background-color: #9df2bb;
+    background-image: url(../smart_images/span6.png);
+    background-size: 100px 100px;
+    background-position: 100% 75%;
+}
+
+.a1:hover{
+    background-color: #8fdcaa;
+}
