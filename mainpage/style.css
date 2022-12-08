@@ -1,0 +1,156 @@
+@font-face {
+    font-family: "OpenSansBold";
+    src: url(/fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: "OpenSansLight";
+    src: url(/fonts/OpenSans-Light.ttf);
+}
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url(/fonts/OpenSans-Regular.ttf);
+}
+.background-color {
+    background-color: #FCEDDA;
+}
+body{
+    resize: none;
+    height: 100%;
+    width: 100%;
+}
+
+.block__item{
+    float: left; 
+    width: 15%; 
+    display: grid;
+    margin-left: 8%;
+    margin-top: 7%;
+    resize: none;
+}
+
+.block__item1{
+    float: left; 
+    width: 15%; 
+    display: grid;
+    margin-left: 8%;
+    margin-top: 7%;
+}
+.textlayout{
+    font-family: 'OpenSansBold';
+    font-size: 15px;
+    border-radius: 6px;
+    text-align: center;
+    color: #EE4E34;
+}
+
+.textinboxes{
+    font-family: 'OpenSansBold';
+    font-size: 15px;
+    border-radius: 6px;
+
+}
+.square1 {
+    width: 181px;
+    height: 181px;
+    background-color: #EE4E34;
+    border-radius: 45px;
+
+}
+
+.square2 {
+    width: 181px;
+    height: 181px;
+    background-color: #EE4E34;
+    border-radius: 45px;
+}
+
+.square3 {
+    width: 181px;
+    height: 181px;
+    background-color: #EE4E34;
+    border-radius: 45px;
+
+
+}
+
+.square4 {
+    width: 181px;
+    height: 181px;
+    background-color: #EE4E34;
+    border-radius: 45px;
+}
+
+.square5 {
+    width: 181px;
+    height: 181px;
+    background-color: #EE4E34;
+    border-radius: 45px;
+
+}
+
+.square6 {
+    width: 181px;
+    height: 181px;
+    background-color: #EE4E34;
+    border-radius: 45px;
+ 
+}
+
+.square7 {
+    width: 181px;
+    height: 181px;
+    background-color: #EE4E34;
+    border-radius: 45px;
+
+
+}
+
+.square8 {
+    width: 181px;
+    height: 181px;
+    background-color: #FCEDDA;
+    border-radius: 45px;
+    border-style: solid;
+    border-color: #EE4E34;
+    border-width: 7px;
+
+}
+
+
+.nameofgrouptext{
+    font-family: 'OpenSansBold';
+    font-size: 16px;
+    border-radius: 6px;
+    margin-left: 16px;
+    margin-top: 30px;
+}    
+
+
+.nameofgrouptextfirst{
+    font-family: 'OpenSansBold';
+    font-size: 16px;
+    border-radius: 6px;
+    margin-right: 25px;
+    text-align: right;
+    margin-top: 8px;
+}   
+.nameofgrouptextdevice{
+    font-family: 'OpenSansBold';
+    font-size: 25px;
+    color: #FCEDDA;
+    border-radius: 24px;
+    margin-top: 50px;
+    text-align: center;
+}
+.arrow{
+ width: 43px;
+margin-left: 65%;
+margin-top: 35%;
+}
+.plus{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 11px;
+    width: 50%;
+}
