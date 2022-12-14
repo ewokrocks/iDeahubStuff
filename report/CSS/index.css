@@ -14,10 +14,8 @@ body {
   font-family: "electronicFont";
   margin: 0;
   padding: 0;
-  /*  背景图定位 / 背景图尺寸  cover 完全铺满容器  contain 完整显示在容器内 */
   background-color: #fcedda;
   background-size: cover;
-  /* 行高是字体1.15倍 */
   line-height: 1.15;
 }
 header {
@@ -187,61 +185,6 @@ header .showTime {
   font-size: 0.225rem;
   color: rgba(253, 38, 1, 0.963);
   padding-top: 0.125rem;
-}
-.map {
-  position: relative;
-  height: 10.125rem;
-}
-.map .chart {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-  height: 10.125rem;
-  width: 100%;
-}
-.map .map1,
-.map .map2,
-.map .map3 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 6.475rem;
-  height: 6.475rem;
-  background: url(../images/map.png) no-repeat;
-  background-size: 100% 100%;
-  opacity: 0.3;
-}
-.map .map2 {
-  width: 8.0375rem;
-  height: 8.0375rem;
-  background-image: url(../images/lbx.png);
-  opacity: 0.6;
-  animation: rotate 15s linear infinite;
-  z-index: 2;
-}
-.map .map3 {
-  width: 7.075rem;
-  height: 7.075rem;
-  background-image: url(../images/jt.png);
-  animation: rotate1 10s linear infinite;
-}
-@keyframes rotate {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(360deg);
-  }
-}
-@keyframes rotate1 {
-  from {
-    transform: translate(-50%, -50%) rotate(0deg);
-  }
-  to {
-    transform: translate(-50%, -50%) rotate(-360deg);
-  }
 }
 @media screen and (max-width: 1024px) {
   html {
