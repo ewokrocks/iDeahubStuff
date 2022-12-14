@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Report</title>
+    <link rel="stylesheet" href="css/index.css" />
+  </head>
+  <body>
+    <!-- header -->
+    <header>
+      <h1>Report</h1>
+      <div class="showTime"></div>
+      <script>
+        var t = null;
+        t = setTimeout(time, 1000); //start
+        function time() {
+          clearTimeout(t); 
+          dt = new Date();
+          var y = dt.getFullYear();
+          var mt = dt.getMonth() + 1;//month
+          var day = dt.getDate();
+          var h = dt.getHours(); //hour
+          var m = dt.getMinutes(); //min
+          var s = dt.getSeconds(); //sec
+          document.querySelector(".showTime").innerHTML =
+            "Time：" +
+            day +
+            "/" +
+            mt +
+            "/" +
+            y +
+            "--" +
+            h +
+            ": " +
+            m +
+            ": " +
+            s +
+            " ";
+          t = setTimeout(time, 1000); //loop
+        }
+      </script>
+    </header>
+
+    <!-- main -->
+    <section class="mainbox">
+      <div class="column">
+        <div class="panel bar">
+          <h2>Week report</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line">
+          <h2>
+            Month Report  <a href="javacript:;"></a
+            ><a href="javascript:;"></a>
+          </h2>
+          <div class="chart">chart</div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie">
+          <h2>Age</h2>
+          <div class="chart">chart</div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+    
+      <div class="column">
+        <div class="panel bar2">
+          <h2>Use of Device</h2>
+          <div class="chart">chart</div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line2">
+          <h2>Consumption of water and electricity</h2>
+          <div class="chart">chart</div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie2">
+          <h2>Distribution of city</h2>
+          <div class="chart">chart</div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+     <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
