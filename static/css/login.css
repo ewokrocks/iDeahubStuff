@@ -12,7 +12,9 @@ body {
     justify-content: center;
     background-color: white;
 }
-
+.background-color {
+    background-color: #FCEDDA;
+}
 .container {
     position: relative;
     max-width: 430px;
