@@ -1,8 +1,24 @@
+@font-face {
+    font-family: "OpenSansBold";
+    src: url(/static/fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: "OpenSansLight";
+    src: url(/static/fonts/OpenSans-Light.ttf);
+}
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url(/static/fonts/OpenSans-Regular.ttf);
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'OpenSans-Bold';
+    
 }
 
 body {
@@ -11,6 +27,7 @@ body {
     align-items: center;
     justify-content: center;
     background-color: white;
+    font-family: 'OpenSansBold';
 }
 
 .container {
@@ -20,6 +37,7 @@ body {
     background-color: #EE4E34;
     padding: 30px;
     border-radius: 25px;
+    font-family: 'OpenSansBold';
 }
 
 img {
@@ -29,10 +47,12 @@ img {
 p {
     color: #fcedda;
     margin-bottom: 20px;
+    font-family: 'OpenSansBold';
 }
 
 .innercontainer {
     position: relative;
+    font-family: 'OpenSansBold';
     max-width: 430px;
     width: 100%;
     background-color: #fcedda;
@@ -47,6 +67,7 @@ p {
     margin-top: 5px;
     align-items: center;
     text-align: center;
+    font-family: 'OpenSansBold';
 }
 
 .input-field input {
@@ -58,6 +79,7 @@ p {
     border-style: solid;
     border-radius: 25px;
     align-items: center;
+    font-family: 'OpenSansBold';
 }
 
  ::placeholder {
@@ -65,17 +87,17 @@ p {
     text-align: center;
     font-size: medium;
     font-weight: bold;
-    font-family: 'opensans';
+    font-family: 'OpenSansBold';
 }
 
 .line {
     color: #EE4E34;
     text-align: center;
     font-size: medium;
-    font-family: 'opensans';
     font-weight: bold;
     margin-top: 20px;
     font-weight: bold;
+    font-family: 'OpenSansBold';
 }
 
 .line a {
@@ -98,4 +120,5 @@ button {
     height: 75%;
     margin-top: 20px;
     font-weight: bold;
+    font-family: 'OpenSansBold';
 }
