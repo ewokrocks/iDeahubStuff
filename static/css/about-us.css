@@ -15,6 +15,71 @@
     animation: transitionIn 1s;
 }
 
+@media only screen and (min-width: 768px){      
+
+
+    .smalltext{
+        font-family: 'OpenSansBold';
+        text-align: center;
+        margin-top: 60px;
+        color: #FCEDDA;
+        font-size: 6px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    
+    .block1{
+        background: linear-gradient( rgba(157,170,249,1) 0%, rgba(238,78,52,1) 50%);
+        margin-top: 87px;
+        margin-left: 125px;
+        width: 150px;
+        height: 285px;
+        border-radius: 31px;
+        float: left;
+        font-family: 'OpenSansBold';
+        text-align: center;
+        text-indent: 15px;
+        
+    }
+    
+    .block2{
+        background: linear-gradient( rgba(157,170,249,1) 0%, rgba(238,78,52,1) 50%);
+        background-color: #EE4E34;
+        margin-top: 87px;
+        margin-left: 125px;
+        width: 150px;
+        height: 285px;
+        border-radius: 31px;
+        float: left;
+        font-family: 'OpenSansBold';
+        text-align: center;
+        text-indent: each-line 15px;
+    }
+    p{
+        font-family: 'OpenSansBold';
+        text-align: center;
+        margin-top: 30px;
+        color: #FCEDDA;
+        font-size: 20px;
+        
+    }
+    
+    .block3{
+        background: linear-gradient( rgba(157,170,249,1) 0%, rgba(238,78,52,1) 50%);
+        background-color: #EE4E34;
+        margin-top: 87px;
+        margin-left: 125px;
+        width: 150px;
+        height: 285px;
+        border-radius: 31px;
+        float: left;
+        font-family: 'OpenSansBold';
+        text-align: justify;
+        text-indent: each-line 15px;
+        
+    }
+
+}
 
 @keyframes transitionIn {
     from    {
@@ -43,7 +108,7 @@
 .body{
     size: 100%;
 }
-/* fkjdkf */
+
 .smalltext{
     font-family: 'OpenSansBold';
     text-align: center;
@@ -104,3 +169,4 @@ p{
     text-indent: each-line 15px;
     
 }
+
