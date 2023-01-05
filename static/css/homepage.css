@@ -1,17 +1,17 @@
 @font-face {
     font-family: "OpenSansBold";
-    src: url(../font/OpenSans-Bold.ttf);
+    src: url(/static/fonts/OpenSans-Bold.ttf);
 }
-
 @font-face {
     font-family: "OpenSansLight";
-    src: url(../font/OpenSans-Light.ttf);
+    src: url(/static/fonts/OpenSans-Light.ttf);
 }
-
 @font-face {
     font-family: "OpenSansRegular";
-    src: url(../font/OpenSans-Regular.ttf);
-}
+    src: url(/static/fonts/OpenSans-Regular.ttf);
+}     
+
+
 
 .main{
     height: 700px;
@@ -52,7 +52,7 @@ body{
     height: 140px;
     color: #ee4e34;
     font-size: 50px;
-    font-family: "OpenSansBold";
+    font-family: 'OpenSansBold';
     line-height: 140px;
     text-align: center;
 }
@@ -83,7 +83,7 @@ body{
     height: 150px;
     color: #fcedda;
     font-size: 29px;
-    font-family: "OpenSansBold";
+    font-family: 'OpenSansBold';
     text-align: center;;
     box-sizing: border-box;
     padding-top: 50px;
@@ -100,35 +100,35 @@ body{
 
 .span1{
     background-color: #d8ff2b;
-    background-image: url(../smart_images/span1.png);
+    background-image: url(../images/span1.png);
     background-size: 100px 100px;
     background-position: 100% 75%;
 }
 
 .span2{
     background-color: #e456f6;
-    background-image: url(../smart_images/span2.png);
+    background-image: url(../images/span2.png);
     background-size: 100px 100px;
     background-position: 90% 75%;
 }
 
 .span3{
     background-color: #9daaf2;
-    background-image: url(../smart_images/span3.png);
+    background-image: url(../images/span3.png);
     background-size: 100px 100px;
     background-position: 100% 75%;
 }
 
 .span4{
     background-color: #088b2b;
-    background-image: url(../smart_images/span4.png);
+    background-image: url(../images/span4.png);
     background-size: 100px 100px;
     background-position: 90% 75%;
 }
 
 .span5{
     background-color: #17f2e3;
-    background-image: url(../smart_images/span5.png);
+    background-image: url(../images/span5.png);
     background-size: 120px 120px;
     background-position: 100% 100%;
 }
@@ -141,7 +141,7 @@ body{
     border-radius: 100% 0 20% 0;
     background-repeat: no-repeat;
     background-color: #9df2bb;
-    background-image: url(../smart_images/span6.png);
+    background-image: url(../images/span6.png);
     background-size: 100px 100px;
     background-position: 100% 75%;
 }
