@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Forgot Password</title>
-	<link rel="stylesheet" href="../static/css/forgotpass.css">
+	<link rel="stylesheet" href="../static/css/forgotpass1.css">
 </head>
 <body>
 	<form action="forgot-password.php" method="post">
