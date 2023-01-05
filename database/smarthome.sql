@@ -5,10 +5,8 @@ CREATE TABLE `User`(
 `UserID` INT primary KEY,
 `FirstName` varchar(45) NOT NULL,
 `LastName` varchar(45) not null,
-`Address` varchar(45) not null,
 `password` varchar(45) not null,
-`Email` varchar(45) not null,
-`Status` tinyint
+`Email` varchar(45) not null
 );
 
 CREATE TABLE `Device`(
@@ -39,6 +37,7 @@ CREATE TABLE `DeviceVersion`(
 `Value` int,
 `DeviceID` int references Device(DeviceID)
 );
+
 
 
 
