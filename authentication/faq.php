@@ -13,8 +13,4 @@ $answers = [
   "PHP is often used to create web-based applications, such as content management systems, forums, and e-commerce websites. It can also be used to access and manipulate databases, create dynamic images, and perform server-side validation of form data.",
 ];
 
-for ($i = 0; $i < count($questions); $i++) {
-  echo "<h3>".$questions[$i]."</h3>";
-  echo "<p>".$answers[$i]."</p>";
-}
 ?>
