@@ -1,4 +1,4 @@
-CREATE DATABASE `smarthome`;
+CREATE DATABASE if not exists `smarthome`;
 use smarthome;
 
 CREATE TABLE `User`(
