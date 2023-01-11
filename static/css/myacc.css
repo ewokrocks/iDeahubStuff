@@ -1,0 +1,50 @@
+@font-face {
+    font-family: "OpenSansBold";
+    src: url(/static/fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: "OpenSansLight";
+    src: url(/static/fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url(/static/fonts/OpenSans-Regular.ttf);
+}
+
+
+body {
+    background-color: #fcedda;
+    
+  }
+  
+  form {
+    background-color: #fcedda;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: 'OpenSansBold';
+    
+  }
+  
+  input[type="text"] {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 2px solid #EE4E34;
+    font-family: 'OpenSansBold';
+    
+  }
+  
+  input[type="submit"] {
+    background-color: #EE4E34;
+    color: #fcedda;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 2px solid #9DAAF2;
+    cursor: pointer;
+    font-family: 'OpenSansBold';
+    
+  }
+  .enter{
+    font-family: "OpenSans-Bold";
+    color: #EE4E34;
+  }

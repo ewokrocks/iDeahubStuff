@@ -21,6 +21,13 @@
     
 }
 
+a{
+    font-family: 'OpenSansBold';
+    color: #EE4E34; 
+    font-weight: bold;
+}
+
+
 body {
     height: 100vh;
     display: flex;

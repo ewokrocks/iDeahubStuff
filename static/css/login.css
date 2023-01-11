@@ -100,6 +100,11 @@ p {
     font-family: 'OpenSansBold';
     font-weight: bold;
 }
+a{
+    font-family: 'OpenSansBold';
+    color: #EE4E34; 
+    font-weight: bold;
+}
 
 button {
     background-color: #EE4E34;

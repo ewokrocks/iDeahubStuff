@@ -8,6 +8,7 @@
     <title>Navbar</title>
     <link rel="stylesheet" href="../static/css/navbar.css">
 
+
 </head>
 
 <body>

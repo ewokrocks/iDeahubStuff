@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="../static/css/about-us.css">
 </head>
 <body style="background-color:#FCEDDA;">
-
+<?php
+require_once("navbar.php");
+?>
    
     <div class="textmain">WHO WE ARE?</div>
     <div class="container">
@@ -27,10 +29,10 @@
                 Nulla vel tellus ac magna interdum tincidunt. Nullam tellus erat, pellentesque vitae nulla in, tempus malesuada risus. Sed elit massa, dignissim vel ornare sit amet, hendrerit eu est. Curabitur malesuada semper magna at volutpat. Pellentesque vitae consequat tortor, eu ornare lacus. Donec vitae justo velit. Aliquam erat volutpat. Nullam elementum bibendum massa, laoreet scelerisque ligula sollicitudin eget. Vestibulum rhoncus rhoncus enim eget ullamcorper. Morbi eu risus et tortor varius pharetra. In cursus commodo magna, sed convallis enim consectetur at. Aenean mi massa, consectetur et massa sed, pretium commodo est. Aenean consectetur leo libero, a hendrerit dui mattis ut. Nam eleifend arcu eleifend dignissim volutpat.
             </div>
         </div>
+        <br>
     </div>
+<br>
+
 </body>
-<footer>  
-    <p><br>Author: Hege Refsnes
-    <a href="mailto:hege@example.com">hege@example.com</a></p>
-</footer>
+
 </html>
