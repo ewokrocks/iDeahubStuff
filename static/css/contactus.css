@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 
 
 
@@ -9,12 +9,12 @@
 
 body{
     background-color: #fcedda;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 input{
     display: inline-block;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 html, body, .main{
@@ -38,7 +38,7 @@ html, body, .main{
 }
 .title_bottom{
     height: 100px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     font-size: 60px;
     color: #ee4e34;
     text-align: center;
@@ -47,7 +47,7 @@ html, body, .main{
 .content>div{
     height: 100px;
     font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #ee4e34;
     margin-left: 94px;
     
@@ -73,7 +73,7 @@ input[type=text]{
     border: 3px solid #ee4e34;
     font-size: 20px;
     background-color: #f7eee3;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #ee4e34;
 }
 
@@ -84,7 +84,7 @@ input[type=text]{
     border-radius: 5px;
     border: 3px solid #ee4e34;
     font-size: 20px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #ee4e34;
     background-color: #f7eee3;
 }
@@ -104,7 +104,7 @@ input[type=text]{
     height: 60px;
     background-color: #ee4e34;
     border: 0px solid #ee4e34;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     color: #fcedda;
     border-radius: 15px;
     font-size: 25px;

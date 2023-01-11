@@ -5,6 +5,9 @@
     <link rel="stylesheet" href="../static/css/myacc.css">
   </head>
   <body>
+  <?php
+require_once("navbar.php");
+?>
     <div class="enter">
     <form>
       <label>Name:</label>
@@ -25,5 +28,8 @@
       <input type="submit" value="Change Credentials">
     </form>
   </div>
+  <?php
+  require_once("Footer.php");
+  ?>
   </body>
 </html>
