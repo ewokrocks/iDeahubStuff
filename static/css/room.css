@@ -103,6 +103,7 @@ margin: 0 auto;
 }
 .switch-button:checked{
     background-color: rgba(157,170,249,1);
+    
 }
 .switch-button::before{
     content: '';
@@ -125,3 +126,8 @@ margin: 0 auto;
     top:10%;
     /* transform: translate(-20%,-20%); */
 }
+img{
+    width: 50px;
+    height: 50px;
+}
+
