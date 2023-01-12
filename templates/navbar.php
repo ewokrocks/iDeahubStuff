@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    
+
     <nav class="navbar">
         <div class="brand-title">Smart Home</div>
         <a href="#" class="toggle-button">

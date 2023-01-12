@@ -10,6 +10,14 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 
+.my-link {
+    color:#FCEDDA;
+  }
+
+a{
+    color:#FCEDDA;
+  }
+
 body {
 
     font-family: 'Open Sans', sans-serif;

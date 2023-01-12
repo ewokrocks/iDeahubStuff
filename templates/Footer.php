@@ -69,9 +69,9 @@
                 
                 <div class="footer-col">
 
-                    <h4> FAQ </h4>
+                    <h4><a href="/templates/faqpage.php" class="my-link"> FAQ </a></h4>
                     <ul>
-                        <li><a href="#"></a> </li>
+                        <li> </li>
                     </ul>
 
                 </div>

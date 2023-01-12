@@ -1,4 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
+@font-face {
+    font-family: "OpenSansBold";
+    src: url(/static/fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: "OpenSansLight";
+    src: url(/static/fonts/OpenSans-Light.ttf);
+}
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url(/static/fonts/OpenSans-Regular.ttf);
+}
 
 
 
@@ -9,23 +20,19 @@
 
 body{
     background-color: #fcedda;
-    font-family: 'Open Sans', sans-serif;
 }
 
 input{
     display: inline-block;
-    font-family: 'Open Sans', sans-serif;
 }
 
 html, body, .main{
     height: 100%;
-    background-color: #fcedda;
 }
 .main{
     width: 700px;
     /* background-color: #ee4e34; */
     margin: 0 auto;
-    background-color: #fcedda;
 }
 
 .title{
@@ -38,7 +45,7 @@ html, body, .main{
 }
 .title_bottom{
     height: 100px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSansBold";
     font-size: 60px;
     color: #ee4e34;
     text-align: center;
@@ -47,7 +54,7 @@ html, body, .main{
 .content>div{
     height: 100px;
     font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSansBold";
     color: #ee4e34;
     margin-left: 94px;
     
@@ -73,22 +80,24 @@ input[type=text]{
     border: 3px solid #ee4e34;
     font-size: 20px;
     background-color: #f7eee3;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSansBold";
     color: #ee4e34;
 }
 
 .textarea{
     margin-top: 15px;
-    height: 100px;
+    height: 85px;
     width: 500px;
     border-radius: 5px;
     border: 3px solid #ee4e34;
     font-size: 20px;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSansBold";
     color: #ee4e34;
     background-color: #f7eee3;
 }
-
+.button{
+    margin-top: 50px;
+}
 .button div{
     background-color: #ee4e34;
     width: 50px;
@@ -104,7 +113,7 @@ input[type=text]{
     height: 60px;
     background-color: #ee4e34;
     border: 0px solid #ee4e34;
-    font-family: 'Open Sans', sans-serif;
+    font-family: "OpenSansBold";
     color: #fcedda;
     border-radius: 15px;
     font-size: 25px;
