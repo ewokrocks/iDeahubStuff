@@ -79,7 +79,7 @@ input[type=text]{
 
 .textarea{
     margin-top: 15px;
-    height: 100px;
+    height: 85px;
     width: 500px;
     border-radius: 5px;
     border: 3px solid #ee4e34;
@@ -88,7 +88,9 @@ input[type=text]{
     color: #ee4e34;
     background-color: #f7eee3;
 }
-
+.button{
+    margin-top: 50px;
+}
 .button div{
     background-color: #ee4e34;
     width: 50px;

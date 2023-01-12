@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/contactus.css">
+    <link rel="stylesheet" href="../static/css/contact-us.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,23 +20,23 @@ require_once("navbar.php");
             <div class="title_bottom">CONTACT US</div>
         </div>
 
-        <form action="contact.php" method="POST">
+        <form action="../core/contact.php" method="post">
         <div class="content">
             
-            <div class="name">Name<br>
-                <input type="text" name="name" value="" maxlength="20">
+            <div class="name"><label for="name">Name</label><br>
+                <input type="text" name="name" value="" maxlength="20" id="name">
             </div>
 
-            <div class="surname">Surname<br>
-                <input type="text" name="surname" value="" maxlength="20">
+            <div class="surname"><label for="surname">Surname</label>><br>
+                <input type="text" name="surname" value="" maxlength="20" id="surname">
             </div>
 
-            <div class="contact">E-mail<br>
-                <input type="text" name="email" value="" maxlength="20">
+            <div class="contact"><lable for="contact">E-mail</lable>><br>
+                <input type="text" name="contact" value="" maxlength="20" id="contact">
             </div>
 
-            <div class="catagory">Question Type<br>
-                <select name='question_type' class="selection">
+            <div class="catagory"><label for="category">Question Type</label>><br>
+                <select name='catagory' class="selection" id="category">
                     <option value="account-problem">Account Problem</option>
                     <option value="personal-info">Personal Information Problem</option>
                     <option value ="device-problem">Device Management Problem</option>
@@ -44,14 +44,14 @@ require_once("navbar.php");
                 </select>
             </div>
 
-            <div class="description">Specific Description<br>
-                <textarea name="message" cols="50" rows="5" class="textarea"></textarea>
+            <div class="description"><lable for="description">Specific Description</lable>><br>
+                <textarea name="message" cols="50" rows="5" class="textarea" id="description"></textarea>
             </div>
 
-            <!-- <div class="photo">Screenshot of The Problem<br>
+            <!-- <div class="photo"><lable for="photo">Screenshot of The Problem</lable>><br>
                 <div class="file">
                     <div class="file1"></div>
-                <input type="file" name="screenshot" value="111">
+                <input type="file" name="screenshot" value="111" id="photo">
                 </div>
                 
             </div> -->
