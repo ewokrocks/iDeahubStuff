@@ -5,8 +5,8 @@
   <title>FAQ</title>
 </head>
 <body>
-<?php 
-include ("faq.php");
+<?php
+require_once("navbar.php");
 ?>
 <h1>Frequently Asked Questions</h1>
 
@@ -34,3 +34,10 @@ include ("faq.php");
 <div class="question">Question 5: Is PHP easy to learn?</div>
 <div class="answer">
   Answer: Some people find PHP relatively easy to learn, while others may find it more challenging. It can depend on your previous programming experience and the resources you use to learn. There are many online tutorials and resources available to help you learn PHP, and practicing by building small
+</div>
+<?php
+require_once("Footer.php");
+?>
+</body>
+
+</html>

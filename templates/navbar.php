@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar</title>
     <link rel="stylesheet" href="../static/css/navbar.css">
+    
+
 
 </head>
 
@@ -21,7 +23,7 @@
         </a>
         <div class="navbar-links">
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="../templates/homepage.php">Home</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">My account</a></li>
             </ul>

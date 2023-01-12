@@ -7,10 +7,11 @@
     <title>Document</title>
     <link rel="stylesheet" href="../static/css/main-page.css">
 </head>
-<header>
-    
-</header>
+
 <body style="background-color:#FCEDDA;">
+<?php
+require_once("navbar.php");
+?>
     <div class="block__item">
         <div class="square1">
                 <div class="nameofgrouptextdevice">Devices connected
@@ -71,12 +72,13 @@
                 <div class="textlayout">New Layout</div>
         </div>
     </div>
+    <br>
 
-
-
-
-</body>
 <footer>
-
+    <?php
+require_once("Footer.php");
+?>
 </footer>
+</body>
+
 </html>

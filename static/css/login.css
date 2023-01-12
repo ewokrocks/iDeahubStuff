@@ -1,15 +1,4 @@
-@font-face {
-    font-family: "OpenSansBold";
-    src: url(/static/fonts/OpenSans-Bold.ttf);
-}
-@font-face {
-    font-family: "OpenSansLight";
-    src: url(/static/fonts/OpenSans-Light.ttf);
-}
-@font-face {
-    font-family: "OpenSansRegular";
-    src: url(/static/fonts/OpenSans-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 
 
 
@@ -22,12 +11,12 @@
 }
 
 body {
-    height: 100vh;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: white;
-    font-family: 'OpenSansBold';
+    font-family: 'Open Sans', sans-serif;
 }
 .background-color {
     background-color: #FCEDDA;
@@ -39,7 +28,7 @@ body {
     background-color: #EE4E34;
     padding: 40px;
     border-radius: 25px;
-    font-family: 'OpenSansBold';
+    font-family: 'Open Sans', sans-serif;
 }
 
 img {
@@ -49,7 +38,7 @@ img {
 p {
     color: #fcedda;
     margin-bottom: 20px;
-    font-family: 'OpenSansBold';
+    font-family: 'Open Sans', sans-serif;
 }
 
 .innercontainer {
@@ -59,30 +48,28 @@ p {
     background-color: #fcedda;
     padding: 30px;
     border-radius: 25px;
-    font-family: 'OpenSansBold';
+    font-family: 'Open Sans', sans-serif;
 }
 
 .innercontainer .input-field {
     position: relative;
-    height: 75px;
     width: 75%;
     margin-top: 20px;
     align-items: center;
     text-align: center;
-    font-family: 'OpenSansBold';
+    font-family: 'Open Sans', sans-serif;
 }
 
 
 .input-field input {
     position: relative;
     width: 130%;
-    height: 75%;
     padding: 0 35px;
     border-color: #EE4E34;
     border-style: solid;
     border-radius: 25px;
     align-items: center;
-    font-family: 'OpenSansBold';
+    font-family: 'Open Sans', sans-serif;
 }
 
  ::placeholder {
@@ -90,14 +77,19 @@ p {
     text-align: center;
     font-size: medium;
     font-weight: bold;
-    font-family: 'OpenSansBold';
+    font-family: 'Open Sans', sans-serif;
 }
 
 .line {
     color: #EE4E34;
     text-align: center;
     font-size: small;
-    font-family: 'OpenSansBold';
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+}
+a{
+    font-family: 'Open Sans', sans-serif;
+    color: #EE4E34; 
     font-weight: bold;
 }
 
@@ -113,10 +105,9 @@ button {
     display: inline-block;
     font-size: 16px;
     width: 100%;
-    height: 75%;
     margin-top: 20px;
     font-weight: bold;
-    font-family: 'OpenSansBold';
+    font-family: 'Open Sans', sans-serif;
 }
 
 .create {
@@ -132,7 +123,6 @@ button {
     margin-top: 20px;
     margin-bottom: 30px;
     width: 100%;
-    height: 75%;
     font-weight: bold;
-    font-family: 'OpenSansBold';
+    font-family: 'Open Sans', sans-serif;
 }
