@@ -1,15 +1,4 @@
-@font-face {
-  font-family: "OpenSansBold";
-  src: url(/static/fonts/OpenSans-Bold.ttf);
-}
-@font-face {
-  font-family: "OpenSansLight";
-  src: url(/static/fonts/OpenSans-Light.ttf);
-}
-@font-face {
-  font-family: "OpenSansRegular";
-  src: url(/static/fonts/OpenSans-Regular.ttf);
-}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 
 
 
