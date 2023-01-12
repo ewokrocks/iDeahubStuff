@@ -82,11 +82,7 @@ if(isset($_POST['register'])){
 
             <div class="line">
                 Already have an account!
-<<<<<<< HEAD
                 <a href="login.php">Login here</a>
-=======
-                <a href="login.html">Login here</a>
->>>>>>> zihua
             </div>
 
         </div>

@@ -1,3 +1,5 @@
+<?php include "db.php" ?>
+
 <html>
   <head>
     <style>
@@ -47,8 +49,9 @@
   </head>
   <body>
     <form action="" method="post">
-      <input type="password" name="password" placeholder="Enter new password" required>
-      <input type="password" name="confirm_password" placeholder="Confirm new password" required>
+      <input type="password" name="current-password" placeholder="Enter your current password" required>
+      <input type="password" name="new-password" placeholder="Enter new password" required>
+      <input type="password" name="confir-password" placeholder="Confirm new password" required>
       <input type="submit" value="Submit">
     </form>
     <div class="message">

@@ -9,9 +9,11 @@
     <title>Document</title>
 </head>
 <body>
+
 <?php
 require_once("navbar.php");
 ?>
+
     <div class="main">
         
         <div class="title">
@@ -32,11 +34,11 @@ require_once("navbar.php");
             </div>
 
             <div class="contact"><lable for="contact">E-mail</lable>><br>
-                <input type="text" name="contact" value="" maxlength="20" id="contact">
+                <input type="text" name="email" value="" maxlength="20" id="contact">
             </div>
 
             <div class="catagory"><label for="category">Question Type</label>><br>
-                <select name='catagory' class="selection" id="category">
+                <select name='type' class="selection" id="category">
                     <option value="account-problem">Account Problem</option>
                     <option value="personal-info">Personal Information Problem</option>
                     <option value ="device-problem">Device Management Problem</option>
