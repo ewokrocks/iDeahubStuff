@@ -1,48 +1,5 @@
-<?php include "db.php" ?>
-
-<?php
-
-if(isset($_POST['register'])){
-    
-    $username = $_POST['name'];
-    $lastname = $_POST['surname'];
-    $email = $_POST['email'];
-    $password = $_POST['password'];
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-    global $con;
-
-    $sql = "INSERT INTO user (name, surname,email, password_hash)
-        VALUES (?, ?, ?, ?)";
-    $stmt = $mysqli->stmt_init();
-    if ( ! $stmt->prepare($sql)) {
-        die("SQL error: " . $mysqli->error);
-    }
-    
-    $stmt->bind_param("ssss",
-                      $_POST["surname"],
-                      $_POST["name"],
-                      $_POST["email"],
-                      $password);
-                      
-    if ($stmt->execute()) {
-    
-        header("Location: signup-success.html");
-        exit;
-        
-    } else {
-        
-        if ($mysqli->errno === 1062) {
-            die("email already taken");
-        } else {
-            die($mysqli->error . " " . $mysqli->errno);
-        }
-    }
-}
-
-?>
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="ISO-8859-1">
@@ -59,7 +16,7 @@ if(isset($_POST['register'])){
 
         <div class="innercontainer">
 
-            <form action="../authentication/register.php" name="register" method="POST" id="register" novalidate >
+            <form action="../authentication/register.php" method="POST" id="register" novalidate >
 
                 <div class="input-field"><input type="text" name="name" placeholder="Name" required></div>
 
@@ -76,17 +33,13 @@ if(isset($_POST['register'])){
                 <div class="input-field"><input type="password" name="password_confirmation" placeholder="Confirm Password" required></div>
 
 
-                <button type="submit" name="register" value="Submit" id="button">Sign up</button><br>
+                <button type="submit" value="Submit" id="button">Sign up</button><br>
 
             </form>
 
             <div class="line">
                 Already have an account!
-<<<<<<< HEAD
-                <a href="login.php">Login here</a>
-=======
                 <a href="login.html">Login here</a>
->>>>>>> zihua
             </div>
 
         </div>
@@ -106,4 +59,3 @@ if(isset($_POST['register'])){
 </body>
 
 </html>
-

@@ -1,0 +1,4 @@
+<?php
+$groupname=$_REQUEST[''];
+
+?>
