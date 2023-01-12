@@ -8,10 +8,13 @@
     <title>Login and Registration </title>
 
     <link rel="stylesheet" type="text/css" href="../static/css/login.css">
-
+    <?php
+require_once("navbar.php");
+?>
 </head>
 
 <body style="background-color:#FCEDDA;">
+
     <form action="login.php" method="post"> 
 
         <div class="container">
@@ -32,13 +35,26 @@
     
     
             </div>
+
+
+
+            <div class="line"><a href="/authentication/forgotpass.php">Forgotten password?</a></div>
+
+            <button type="submit" value="Login" id="submit">Login</button><br>
+            <a href="register.html"><button class="create">Create new account</button></a>
+
+
+
+
         </div>
     
         </div>
 
     </form>
    
-
+    <?php
+  require_once("Footer.php");
+  ?>
 </body>
 
 </html>

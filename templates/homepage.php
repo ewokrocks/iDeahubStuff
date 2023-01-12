@@ -8,6 +8,9 @@
     <title>webpage</title>
 </head>
 <body>
+<?php
+require_once("navbar.php");
+?>
     <div class="title">
         What We Offer?
     </div>
@@ -57,5 +60,8 @@
         
     </div>
     <span>
+        <?php
+        require_once("Footer.php");
+        ?>
 </body>
 </html>

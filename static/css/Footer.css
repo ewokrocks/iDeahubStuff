@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,23 +12,27 @@
 
 body {
 
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Open Sans', sans-serif;
     line-height: 1.5;
+    height: 1249px;
+
 }
 
 .container {
     max-width: 1170px;
     margin: auto;
-
+    font-family: 'Open Sans', sans-serif;
 }
 
 .row {
     display: flex;
     flex-wrap: nowrap;
+    font-family: 'Open Sans', sans-serif;
 }
 
 ul {
     list-style: none;
+    font-family: 'Open Sans', sans-serif;
 
 }
 
@@ -34,18 +41,21 @@ ul {
     width: 25%;
     padding: 0 15px;
     font-weight: 500;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .footer-col h4 {
     font-size: 18px;
     color: #FCEDDA;
     margin-bottom: 30px;
+    font-family: 'Open Sans', sans-serif;
 
 }
 
 .footer {
     background-color: #ee4e34;
     padding: 70px 0;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .footer-col ul li:not(:last-child) {
@@ -59,6 +69,7 @@ ul {
 .footer-col h4:hover {
     color: #ffffff;
     padding-left: 8px;
+    font-family: 'Open Sans', sans-serif;
 }
 
 .footer-line {
@@ -66,6 +77,7 @@ ul {
     width: 100%;
     height: 3px;
     position: absolute;
+    font-family: 'Open Sans', sans-serif;
 }
 
 /* responsive */
