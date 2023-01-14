@@ -1,4 +1,5 @@
 <?php
+
 $questions = [
   "What is PHP?",
   "How does PHP work?",
