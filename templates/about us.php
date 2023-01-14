@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="../static/css/about-us.css">
 </head>
-<body style="background-color:#FCEDDA;">
+
 <?php
 require_once("navbar.php");
 ?>
-   
-    <div class="textmain">WHO WE ARE?</div>
-    <div class="container">
-        <div class="block1"> <p>Fusce</p>
-            <div class="smalltext">
-                In sagittis molestie augue, sed dignissim lectus mattis eu. Vivamus elementum felis vitae urna dictum, et hendrerit nisi porta. Aliquam erat volutpat. In lacus velit, aliquam non orci eu, accumsan egestas turpis. Fusce ac ante et libero vestibulum commodo. Donec in aliquet sem, vitae eleifend nisi. Morbi consectetur posuere sapien et molestie. Aenean ornare sit amet sem sed mattis. Nulla vel arcu ultricies, bibendum elit non, euismod tellus. Morbi eu arcu lacus. Vestibulum tempor sem odio, iaculis tempus odio hendrerit eu. Nullam volutpat turpis eu gravida rhoncus.
-            </div>
+
+<div class="textmain">Our core values</div>
+<br>
+<div style="display:flex; justify-content:space-evenly;" class="container">
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Innovation</h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+            <p style="color: #EE4E34;" class="card-text">Innovation plays a key role in introducing novelty to existing
+                product lines or processes, leading to increased market share, revenue, and customer satisfaction. </p>
         </div>
-        <div class="block2"> <p>Lorda</p> 
-            <div class="smalltext">
-                Quisque in porta nisl. Ut eu fermentum tellus, vitae condimentum ligula. Maecenas a pulvinar diam. Duis condimentum dolor ante, in pulvinar orci tincidunt vel. Curabitur ornare mi velit, eget fringilla ex eleifend accumsan. Proin tincidunt est tincidunt diam tristique lacinia. Cras nec tempus ipsum. Donec eget laoreet libero, ut pretium tortor. Vestibulum at purus vitae leo pretium rutrum. Donec pretium mi non lectus consectetur, eget gravida mi consectetur.
-            </div>
-        </div>
-        <div class="block3"> <p>Ipsum </p>
-            <div class="smalltext">
-                Nulla vel tellus ac magna interdum tincidunt. Nullam tellus erat, pellentesque vitae nulla in, tempus malesuada risus. Sed elit massa, dignissim vel ornare sit amet, hendrerit eu est. Curabitur malesuada semper magna at volutpat. Pellentesque vitae consequat tortor, eu ornare lacus. Donec vitae justo velit. Aliquam erat volutpat. Nullam elementum bibendum massa, laoreet scelerisque ligula sollicitudin eget. Vestibulum rhoncus rhoncus enim eget ullamcorper. Morbi eu risus et tortor varius pharetra. In cursus commodo magna, sed convallis enim consectetur at. Aenean mi massa, consectetur et massa sed, pretium commodo est. Aenean consectetur leo libero, a hendrerit dui mattis ut. Nam eleifend arcu eleifend dignissim volutpat.
-            </div>
-        </div>
-        <br>
     </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Safety</h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+            <p style="color: #EE4E34;" class="card-text">Its goals are clear: no accidents, no harm to people and no
+                damage to the environment. That's a huge responsibility </p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Excellence</h5>
+            <h6 class="card-subtitle mb-2 text-muted"></h6>
+            <p style="color: #EE4E34;" class="card-text">We are committed to excellence through the systematic and
+                disciplined management of our operations.</p>
+        </div>
+    </div>
+
+</div>
 <br>
 
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
 </body>
 
 </html>

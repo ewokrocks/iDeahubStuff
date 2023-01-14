@@ -1,162 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 
+:root{
+    --font-family: 'Open Sans', sans-serif;
+    --font-size: 12px;
+    --text-align: center;
+    --color: #FCEDDA;
+    --background-color: #EE4E34;
+    --margin-top: 87px;
+    --border-radius: 31px;
+}
+
 .container{
     animation: transitionIn 1s;
+    display: flex;
 }
 
 @media screen and (min-width: 1000px){      
-
-
-    .smalltext{
-        font-family: 'Open Sans', sans-serif;
-        text-align: center;
-        margin-top: 60px;
-        color: #FCEDDA;
+    .block{
+        font-family: var(--font-family);
+        text-align: var(--text-align);
+        margin-top: var(--margin-top);
+        color: var(--color);
         font-size: 6px;
         margin-left: 10px;
         margin-right: 10px;
-    }
-    
-    .block1{
         background: linear-gradient( rgba(157,170,249,1) 0%, rgba(238,78,52,1) 50%);
-        margin-top: 87px;
-        margin-left: 0px;
         width: 150px;
         height: 285px;
-        border-radius: 31px;
+        border-radius: var(--border-radius);
         display: inline-block;
-        font-family: 'Open Sans', sans-serif;
-        text-align: center;
-        text-indent: 15px;
-        
-    }
-    
-    .block2{
-        background: linear-gradient( rgba(157,170,249,1) 0%, rgba(238,78,52,1) 50%);
-        background-color: #EE4E34;
-        margin-top: 87px;
-        margin-left: 125px;
-        width: 150px;
-        height: 285px;
-        border-radius: 31px;
-        display: inline-block;
-        font-family: 'Open Sans', sans-serif;
-        text-align: center;
-        text-indent: each-line 15px;
     }
     p{
-        font-family: 'Open Sans', sans-serif;
-        text-align: center;
+        font-family: var(--font-family);
+        text-align: var(--text-align);
         margin-top: 30px;
-        color: #FCEDDA;
+        color: var(--color);
         font-size: 20px;
-        
     }
-    
-    .block3{
-        background: linear-gradient( rgba(157,170,249,1) 0%, rgba(238,78,52,1) 50%);
-        background-color: #EE4E34;
-        margin-top: 87px;
-        margin-left: 125px;
-        width: 150px;
-        height: 285px;
-        border-radius: 31px;
-        display: inline-block;
-        font-family: 'Open Sans', sans-serif;
-        text-align: justify;
-        text-indent: each-line 15px;
-        
-    }
-
-}
-
-@keyframes transitionIn {
-    from    {
-    opacity: 0;
-    transform: rotateY(-30px);
-    }
-    to  {
-        opacity: 1;
-        transform: rotateY(0px);
-        
-    }
-}
-
-.background-color {
-    background-color: #FCEDDA;
 }
 
 .textmain{
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    font-size: 75px;
-    margin-top: 56px;
-    color: #EE4E34;
+    font-family: var(--font-family);
+    text-align: var(--text-align);
+    font-size: 75px; }
+
+@media screen and (max-width: 1000px) {
+.container {
+        flex-direction: column;
+}   .block {
+    width: 100%;
+    margin-bottom: 20px;
+    }
 }
 
-.body{
-    size: 100%;
+.card-text{
+    color : #EE4E34
 }
-
-.smalltext{
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    margin-top: 60px;
-    color: #FCEDDA;
-    font-size: 12px;
-    margin-left: 20px;
-    margin-right: 20px;
-}
-
-.block1{
-    background: linear-gradient( rgba(157,170,249,1) 0%, rgba(238,78,52,1) 50%);
-    margin-top: 87px;
-    margin-left: 325px;
-    width: 300px;
-    height: 475px;
-    border-radius: 62px;
-    float: left;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    text-indent: 15px;
-    
-}
-
-.block2{
-    background: linear-gradient( rgba(157,170,249,1) 0%, rgba(238,78,52,1) 50%);
-    background-color: #EE4E34;
-    margin-top: 87px;
-    margin-left: 150px;
-    width: 300px;
-    height: 475px;
-    border-radius: 62px;
-    float: left;
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    text-indent: each-line 15px;
-}
-p{
-    font-family: 'Open Sans', sans-serif;
-    text-align: center;
-    margin-top: 30px;
-    color: #FCEDDA;
-    font-size: 20px;
-    
-}
-
-.block3{
-    background: linear-gradient( rgba(157,170,249,1) 0%, rgba(238,78,52,1) 50%);
-    background-color: #EE4E34;
-    margin-top: 87px;
-    margin-left: 150px;
-    width: 300px;
-    height: 475px;
-    border-radius: 62px;
-    float: left;
-    font-family: 'Open Sans', sans-serif;
-    text-align: justify;
-    text-indent: each-line 15px;
-    
-}
-
-
