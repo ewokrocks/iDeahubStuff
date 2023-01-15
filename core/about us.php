@@ -12,7 +12,9 @@
 </head>
 
 <?php
-require_once("navbar.php");
+
+require_once __DIR__ . '/../templates/navbar.php';
+
 ?>
 
 <div class="textmain">Our core values</div>

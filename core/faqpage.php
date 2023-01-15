@@ -5,11 +5,16 @@
   <title>FAQ</title>
 </head>
 <body>
-<?php
-require_once("navbar.php");
-?>
-<h1>Frequently Asked Questions</h1>
 
+<?php
+
+require_once __DIR__ . '/../templates/navbar.php';
+
+?>
+
+<br>
+<h1>Frequently Asked Questions</h1>
+<br>
 <!-- Create the question and answer blocks -->
 <div class="question">Question 1: What is PHP?</div>
 <div class="answer">
@@ -35,9 +40,14 @@ require_once("navbar.php");
 <div class="answer">
   Answer: Some people find PHP relatively easy to learn, while others may find it more challenging. It can depend on your previous programming experience and the resources you use to learn. There are many online tutorials and resources available to help you learn PHP, and practicing by building small
 </div>
+
 <?php
-require_once("Footer.php");
+
+require_once __DIR__ . '/../templates/footer.php';
+
 ?>
+
+
 </body>
 
 </html>

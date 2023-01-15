@@ -1,128 +1,136 @@
+/* @font-face {
+    font-family: "OpenSansBold";
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: "OpenSansLight";
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url(../fonts/OpenSans-Regular.ttf);
+} */
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 
 
-
-* {
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    font-family: 'OpenSans-Bold';
-    font-weight: bold;
 }
 
-body {
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    font-family: 'Open Sans', sans-serif;
-}
-.background-color {
-    background-color: #FCEDDA;
-}
-.container {
-    position: relative;
-    max-width: 430px;
-    width: 100%;
-    background-color: #EE4E34;
-    padding: 40px;
-    border-radius: 25px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-img {
-    align-items: center;
-}
-
-p {
-    color: #fcedda;
-    margin-bottom: 20px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.innercontainer {
-    position: relative;
-    max-width: 430px;
-    width: 100%;
+body{
     background-color: #fcedda;
-    padding: 30px;
-    border-radius: 25px;
     font-family: 'Open Sans', sans-serif;
 }
 
-.innercontainer .input-field {
-    position: relative;
-    width: 75%;
+input{
+    display: inline-block;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body, .main{
+    height: 100%;
+    background-color: #fcedda;
+}
+.main{
+    width: 700px;
+    /* background-color: #ee4e34; */
+    margin: 0 auto;
+    background-color: #fcedda;
+}
+
+.title{
+    width: 700px;
+    height: 200px;
+    margin-bottom: 50px;
+}
+.title_top{
+    height: 100px;
+}
+.title_bottom{
+    height: 100px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 60px;
+    color: #ee4e34;
+    text-align: center;
+    line-height: 100px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content>div{
+    height: 100px;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #ee4e34;
+    
+}
+
+.photo{
+    margin-top: 60px;
+
+}
+input[type=text]{
+    margin-top: 15px;
+    height: 40px;
+    width: 500px;
+    border-radius: 5px;
+    border: 3px solid #ee4e34;
+    font-size: 20px;
+}
+
+.selection{
+    margin-top: 15px;
+    height: 45px;
+    width: 500px;
+    border-radius: 5px;
+    border: 3px solid #ee4e34;
+    font-size: 20px;
+    background-color: #f7eee3;
+    font-family: 'Open Sans', sans-serif;
+    color: #ee4e34;
+}
+
+.textarea{
+    margin-top: 15px;
+    height: 85px;
+    width: 500px;
+    border-radius: 5px;
+    border: 3px solid #ee4e34;
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    color: #ee4e34;
+    background-color: #f7eee3;
+}
+.button{
+    margin-top: 50px;
+}
+.button div{
+    background-color: #ee4e34;
+    height: 30px;
     margin-top: 20px;
-    align-items: center;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
+    float: left;
+    border-radius: 15px;
 }
 
-
-.input-field input {
-    position: relative;
-    width: 130%;
-    padding: 0 35px;
-    border-color: #EE4E34;
-    border-style: solid;
-    border-radius: 25px;
-    align-items: center;
+.button div input{
+    width: 200px;
+    height: 60px;
+    background-color: #ee4e34;
+    border: 0px solid #ee4e34;
     font-family: 'Open Sans', sans-serif;
-}
-
- ::placeholder {
-    color: #EE4E34;
-    text-align: center;
-    font-size: medium;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.line {
-    color: #EE4E34;
-    text-align: center;
-    font-size: small;
-    font-family: 'Open Sans', sans-serif;
-    font-weight: bold;
-}
-a{
-    font-family: 'Open Sans', sans-serif;
-    color: #EE4E34; 
-    font-weight: bold;
-}
-
-button {
-    background-color: #EE4E34;
-    border-radius: 25px;
-    border-color: #EE4E34;
-    border-style: solid;
     color: #fcedda;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    width: 100%;
-    margin-top: 20px;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
+    border-radius: 15px;
+    font-size: 25px;
 }
-
-.create {
-    background-color: #9daaf2;
-    border-radius: 25px;
-    border-style: solid;
-    border-color: #9daaf2;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    width: 100%;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
+.button div input:hover{
+    background-color: #c43d28;
+    color: #f7eee3;
+}
+input{
+    background-color: #f7eee3;
 }
