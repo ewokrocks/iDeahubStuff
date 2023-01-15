@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
+
+body {
+
+    margin: 0;
+    padding: 0;
+    background-color: #fcedda;
+  }
+
+  h1 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin: 20px 0;
+  }
+
+  .question {
+    /* Style the question block */
+    font-family: 'Open Sans', sans-serif;
+    background-color: #EE4E34;
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    cursor: pointer;
+    color: #fcedda;
+    
+  }
+
+  .question:hover {
+    /* Add hover effect */
+    background-color: grey;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  .answer {
+    /* Style the answer block */
+    background-color: #fcedda;
+    border: 3px solid #EE4E34;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    font-family: 'Open Sans', sans-serif;
+    display: block; /* Hide the answer by default */
+    color: #EE4E34;
+  }
+
+  .question.active + .answer {
+    /* Show the answer when the question is clicked */
+    display: block;
+  }
+  div{
+    font-family: 'Open Sans', sans-serif;
+  }
+  
