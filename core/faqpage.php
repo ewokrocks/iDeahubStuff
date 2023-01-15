@@ -41,11 +41,6 @@ require_once __DIR__ . '/../templates/navbar.php';
   Answer: Some people find PHP relatively easy to learn, while others may find it more challenging. It can depend on your previous programming experience and the resources you use to learn. There are many online tutorials and resources available to help you learn PHP, and practicing by building small
 </div>
 
-<?php
-
-require_once __DIR__ . '/../templates/footer.php';
-
-?>
 
 
 </body>

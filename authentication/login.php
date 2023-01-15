@@ -72,8 +72,10 @@ if (isset($_POST['submit'])) {
 
     </div>
 
-
     <script>
+        if (window.innerWidth > 600) {
+            document.write("<?php require_once '/../templates/footer.php'; ?>");
+        }
         function isvalid() {
             var user = document.form.user.value;
             var pass = document.form.pass.value;

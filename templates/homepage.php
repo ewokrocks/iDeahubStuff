@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,10 +8,13 @@
     <link rel="stylesheet" href="../static/css/homepage.css">
     <title>webpage</title>
 </head>
+
 <body>
-<?php
-require_once("navbar.php");
-?>
+
+    <?php
+    require_once("navbar.php");
+    ?>
+
     <div class="title">
         What We Offer?
     </div>
@@ -56,12 +60,11 @@ require_once("navbar.php");
             </div>
             <a href="#" class="a1"></a>
         </div>
-        </div>
-        
+    </div>
+
     </div>
     <span>
-        <?php
-        require_once("Footer.php");
-        ?>
+
 </body>
+
 </html>

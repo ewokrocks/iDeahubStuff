@@ -10,13 +10,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 
-body {
-
-    font-family: 'Open Sans', sans-serif;
-    line-height: 1.5;
-    height: 1249px;
-
-}
 
 .container {
     max-width: 1170px;
