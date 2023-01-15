@@ -15,6 +15,7 @@
     require_once("navbar.php");
     ?>
 
+
     <div class="title">
         What We Offer?
     </div>
