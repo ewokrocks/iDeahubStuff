@@ -38,6 +38,16 @@ CREATE TABLE `DeviceVersion`(
 `DeviceID` int references Device(DeviceID)
 );
 
+CREATE TABLE `message`(
+    `id` int auto_increasing,
+    `name` varchar(128),
+    `surname` varchar(128),
+    `email` varchar(128),
+    `type` varchar(64),
+    `message` varchar(128)
+;
+)
+
 
 
 
