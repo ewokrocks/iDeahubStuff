@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
+
 @font-face {
   font-family: "OpenSansBold";
-  src: url(/static/fonts/OpenSans-Bold.ttf);
+  src:  url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 }
+
 @font-face {
   font-family: "OpenSansLight";
   src: url(/static/fonts/OpenSans-Light.ttf);
 }
+
+/* @font-face {
+  font-family: "OpenSansBold";
+  src: url(/static/fonts/OpenSans-Bold.ttf);
+}
+
 @font-face {
   font-family: "OpenSansRegular";
   src: url(/static/fonts/OpenSans-Regular.ttf);
-}
+} */
 table{
   border: 1px solid #FCEDDA;
   width: 100%;
@@ -64,14 +72,14 @@ ul {
           text-align:center;/*居中*/
      
       } 
-      a:link, a:visited {
+      /* a:link, a:visited {
     background-color: #EE4E34;
     color: #FCEDDA;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     display: inline-block;
-  }
+  } */
   
   a:hover, a:active {
     background-color: #EE4E34;
@@ -98,7 +106,7 @@ ul {
     border: 1px solid #EE4E34;
     border-radius: 4px;
     box-sizing: border-box;
-    opacity: 0.5;
+    opacity: 0.7;
   }
   
   input[type=submit] {
@@ -134,7 +142,7 @@ ul {
     opacity: 0.8;
   }
   .add{
-    color: rgba(157,170,249,1);
+    color: rgb(1, 5, 28);
     text-align: center;
   }
   .selectsize{
@@ -166,4 +174,41 @@ cursor:pointer;
   left: 30%;
   top:20%;
   /* transform: translate(-20%,-20%); */
+}
+
+.device{
+  font-family: "OpenSansLight";
+  font-size: large;
+  font-weight: bolder;
+}
+
+.group_title{
+  
+  font-family: "OpenSansLight";
+  font-size: larger;
+  font-weight: bolder;
+
+}
+
+#add_group_btn{
+  
+  font-family: "OpenSansLight";
+  font-size: larger;
+  font-weight: bolder;
+}
+
+@media (max-width: 800px) {
+  .pop {
+    margin-top: 200px;
+    margin-right: 600px;
+    position: absolute;
+    align-items: flex-start;
+
+  }
+  
+  .navbar{
+    width: 100%;
+
+  }
+
 }
