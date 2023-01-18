@@ -77,7 +77,7 @@ echo("successfully!")
                 <input type="file" name="screenshot" value="111" id="photo">
                 </div>
                 
-            </div> -->
+                </div> -->
 
                 <div class="button">
                     <div class="submit"><input type="submit" name="contact" value="Submit"></div>
