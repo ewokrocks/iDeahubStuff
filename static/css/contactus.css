@@ -1,6 +1,17 @@
+/* @font-face {
+    font-family: "OpenSansBold";
+    src: url(../fonts/OpenSans-Bold.ttf);
+}
+@font-face {
+    font-family: "OpenSansLight";
+    src: url(../fonts/OpenSans-Light.ttf);
+}
+@font-face {
+    font-family: "OpenSansRegular";
+    src: url(../fonts/OpenSans-Regular.ttf);
+} */
+
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
-
-
 
 *{
     margin: 0;
@@ -30,11 +41,10 @@ html, body, .main{
 
 .title{
     width: 700px;
-    height: 200px;
     margin-bottom: 50px;
 }
 .title_top{
-    height: 100px;
+    height: 30px;
 }
 .title_bottom{
     height: 100px;
@@ -79,7 +89,7 @@ input[type=text]{
 
 .textarea{
     margin-top: 15px;
-    height: 100px;
+    height: 85px;
     width: 500px;
     border-radius: 5px;
     border: 3px solid #ee4e34;
@@ -88,7 +98,9 @@ input[type=text]{
     color: #ee4e34;
     background-color: #f7eee3;
 }
-
+.button{
+    margin-top: 50px;
+}
 .button div{
     background-color: #ee4e34;
     width: 50px;

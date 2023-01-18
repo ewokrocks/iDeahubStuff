@@ -2,8 +2,8 @@
 
 <?php
 
-if(isset($_POST['register'])){
-    
+if (isset($_POST['register'])) {
+
     $username = $_POST['name'];
     $lastname = $_POST['surname'];
     $email = $_POST['email'];
@@ -14,23 +14,25 @@ if(isset($_POST['register'])){
     $sql = "INSERT INTO user (name, surname,email, password_hash)
         VALUES (?, ?, ?, ?)";
     $stmt = $mysqli->stmt_init();
-    if ( ! $stmt->prepare($sql)) {
+    if (!$stmt->prepare($sql)) {
         die("SQL error: " . $mysqli->error);
     }
-    
-    $stmt->bind_param("ssss",
-                      $_POST["surname"],
-                      $_POST["name"],
-                      $_POST["email"],
-                      $password);
-                      
+
+    $stmt->bind_param(
+        "ssss",
+        $_POST["surname"],
+        $_POST["name"],
+        $_POST["email"],
+        $password
+    );
+
     if ($stmt->execute()) {
-    
+
         header("Location: signup-success.html");
         exit;
-        
+
     } else {
-        
+
         if ($mysqli->errno === 1062) {
             die("email already taken");
         } else {
@@ -50,7 +52,17 @@ if(isset($_POST['register'])){
     <link rel="stylesheet" type="text/css" href="../static/css/register.css">
 </head>
 
+
 <body style="background-color:#FCEDDA;">
+
+    <?php
+
+    require_once __DIR__ . '/../templates/navbar.php';
+
+    ?>
+
+
+    <br> <br>
 
     <div class="container">
 
@@ -59,7 +71,7 @@ if(isset($_POST['register'])){
 
         <div class="innercontainer">
 
-            <form action="../authentication/register.php" name="register" method="POST" id="register" novalidate >
+            <form action="../authentication/register.php" name="register" method="POST" id="register" novalidate>
 
                 <div class="input-field"><input type="text" name="name" placeholder="Name" required></div>
 
@@ -73,7 +85,8 @@ if(isset($_POST['register'])){
                 <div class="input-field"><input type="password" name="password" placeholder="Password" required></div>
 
 
-                <div class="input-field"><input type="password" name="password_confirmation" placeholder="Confirm Password" required></div>
+                <div class="input-field"><input type="password" name="password_confirmation"
+                        placeholder="Confirm Password" required></div>
 
 
                 <button type="submit" name="register" value="Submit" id="button">Sign up</button><br>
@@ -82,11 +95,7 @@ if(isset($_POST['register'])){
 
             <div class="line">
                 Already have an account!
-<<<<<<< HEAD
                 <a href="login.php">Login here</a>
-=======
-                <a href="login.html">Login here</a>
->>>>>>> zihua
             </div>
 
         </div>
@@ -106,4 +115,3 @@ if(isset($_POST['register'])){
 </body>
 
 </html>
-

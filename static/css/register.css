@@ -1,29 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 
-
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'OpenSans-Bold';
-    
-}
-
 a{
     font-family: 'Open Sans', sans-serif;
     color: #EE4E34; 
     font-weight: bold;
-}
-
-
-body {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: white;
-    font-family: 'Open Sans', sans-serif;
 }
 
 .container {
@@ -58,7 +38,7 @@ p {
 
 .innercontainer .input-field {
     position: relative;
-    height: 75px;
+    height: 30px;
     width: 75%;
     margin-top: 5px;
     align-items: center;
@@ -69,7 +49,7 @@ p {
 .input-field input {
     position: relative;
     width: 130%;
-    height: 75%;
+    height: 90%;
     padding: 0 35px;
     border-color: #EE4E34;
     border-style: solid;
@@ -117,4 +97,13 @@ button {
     margin-top: 20px;
     font-weight: bold;
     font-family: 'Open Sans', sans-serif;
+}
+
+.container{
+
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 3%);
+    height: 570px;
+    
 }

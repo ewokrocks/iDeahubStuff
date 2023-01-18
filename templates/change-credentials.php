@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>User Credentials</title>
-    <link rel="stylesheet" href="../static/css/myacc.css">
-  </head>
-  <body>
+
+<head>
+  <title>User Credentials</title>
+  <link rel="stylesheet" href="../static/css/myacc.css">
+</head>
+
+<body>
   <?php
-require_once("navbar.php");
-?>
-    <div class="enter">
+  require_once("navbar.php");
+  ?>
+  <div class="enter">
     <form>
       <label>Name:</label>
       <input type="text" id="name" value="John">
@@ -28,8 +30,7 @@ require_once("navbar.php");
       <input type="submit" value="Change Credentials">
     </form>
   </div>
-  <?php
-  require_once("Footer.php");
-  ?>
-  </body>
+
+</body>
+
 </html>
