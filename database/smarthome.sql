@@ -45,8 +45,11 @@ CREATE TABLE `message`(
     `email` varchar(128),
     `type` varchar(64),
     `message` varchar(128)
-;
-)
+);
+
+alter table Group add column `image`;
+
+
 
 
 
