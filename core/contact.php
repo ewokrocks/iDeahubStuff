@@ -1,26 +1,30 @@
 <?php
-$name = $_POST["name"];
-$surname = $_POST["surname"];
-$contact = $_POST["contact"];
-$catagory = $_POST["catagory"];
-$message = $_POST["message"];
 
-$host = "localhost";
-$dbname = "smarthome";
-$username = "root";
-$password = "";
+if (isset($_POST['contact'])) {
+    $name = $_POST["name"];
+    $surname = $_POST["surname"];
+    $email = $_POST["email"];
+    $type = $_POST["type"];
+    $message = $_POST["message"];
 
-$conn = mysqli_connect($host,$username,$password,$dbname);
+    $host = "localhost";
+    $dbname = "smarthome";
+    $username = "root";
+    $password = "";
 
-if (mysqli_connect_errno()){
-    die("Connection error: " . mysqli_connect_errno());
+    $conn = mysqli_connect($host, $username, $password, $dbname);
+
+    if (mysqli_connect_errno()) {
+        die("Connection error: " . mysqli_connect_errno());
+    }
+
+    $sql = "INSERT INTO message (name, surname, email, type, message)
+            VALUES ('{$name}','{$surname}','{$email}','{$type}','{$message}')";
+
+    mysqli_query($conn, $sql) or die(mysqli_error($conn));
+    echo ("your message was delivered successfully!");
 }
 
-$sql = "INSERT INTO message (Name, Surname, E_mail, Question_type, Specific_Description)
-        VALUES ('{$name}','{$surname}','{$contact}','{$catagory}','{$message}')";
-
-mysqli_query($conn,$sql) or die(mysqli_error($conn));
-echo("successfully!")
 ?>
 
 <!DOCTYPE html>
@@ -66,6 +70,14 @@ echo("successfully!")
                     <input type="text" name="email" value="" maxlength="70" id="contact">
                 </div>
 
+                <div class="catagory"><label for="category">Question Type</label><br>
+                    <select name='type' class="selection" id="category">
+                        <option value="account-problem">Account Problem</option>
+                        <option value="personal-info">Personal Information Problem</option>
+                        <option value="device-problem">Device Management Problem</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
 
                 <div class="description"><label for="description">Specific Description</label><br>
                     <textarea name="message" cols="50" rows="5" class="textarea" id="description"></textarea>
@@ -77,7 +89,7 @@ echo("successfully!")
                 <input type="file" name="screenshot" value="111" id="photo">
                 </div>
                 
-                </div> -->
+            </div> -->
 
                 <div class="button">
                     <div class="submit"><input type="submit" name="contact" value="Submit"></div>
