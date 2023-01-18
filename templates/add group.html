@@ -12,13 +12,11 @@ body{
  <body>
   <div class="pop">
     <div class="divAdd">
-      <form action="../authentication/addgroup.php" target="_blank" class="add">
+      <form action="../authentication/addgroup.php" target="_blank" class="add" method="post">
         <label for="fname">NewGroupName</label>
         <input type="text" id="fname" name="groupname" placeholder="new group name..">
-    
-    
         <label for="devices">devices</label>
-        <select id="devices" name="devices" multiple="multiple" class="selectsize">
+        <select id="devices" name="devices[]" multiple="multiple" class="selectsize">
           <option value="device1">airconditioner</option>
           <option value="device2">light1</option>
           <option value="device3">light2</option>
