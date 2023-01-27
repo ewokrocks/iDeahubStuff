@@ -72,6 +72,12 @@ if (isset($_POST['submit'])) {
 
     </div>
 
+    <?php
+
+    require_once __DIR__ . '/../templates/footer.php';
+
+    ?>
+
     <script>
         if (window.innerWidth > 600) {
             document.write("<?php require_once '/../templates/footer.php'; ?>");

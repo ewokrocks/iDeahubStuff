@@ -80,7 +80,10 @@
             <input class="switch-button" type="checkbox">
             <p>Washing-machine</p>
         </div>
+        
     </div>
+
+   
 
 </body>
 

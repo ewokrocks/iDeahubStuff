@@ -74,6 +74,7 @@
     <input type="submit" value="Submit">
   </form>
   <div class="message">
+    
     <?php
     if (isset($_POST['password']) && isset($_POST['confirm_password'])) {
       $password = $_POST['password'];
@@ -85,7 +86,10 @@
       }
     }
     ?>
+
   </div>
+
+
 </body>
 
 </html>
