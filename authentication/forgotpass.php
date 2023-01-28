@@ -23,6 +23,12 @@
 		<!-- Submit button -->
 		<input class="textemail" type="submit" value="Send Reset Link">
 	</form>
+	<br> 
+	<br>
+
+
+	
+
 	<?php
 	if (isset($_POST['email'])) {
 		// Send the reset password email here

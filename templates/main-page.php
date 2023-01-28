@@ -73,13 +73,15 @@
     <div class="block__item1">
         <div class="square8">
             <div class="nameofgrouptext"></div>
-            <a href="page2.html">
+            <a href="add-group.php">
                 <img href="page2.html" class="plus" src="../static/images/plus.svg">
             </a>
             <div class="textlayout">New Layout</div>
         </div>
     </div>
     <br>
+    
+    
 
 </body>
 
