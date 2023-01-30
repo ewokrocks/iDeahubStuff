@@ -1,7 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 
+@font-face {
+  font-family: "OpenSansBold";
+  src:  url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
+}
 
+@font-face {
+  font-family: "OpenSansLight";
+  src: url(/static/fonts/OpenSans-Light.ttf);
+}
 
+/* @font-face {
+  font-family: "OpenSansBold";
+  src: url(/static/fonts/OpenSans-Bold.ttf);
+}
+
+@font-face {
+  font-family: "OpenSansRegular";
+  src: url(/static/fonts/OpenSans-Regular.ttf);
+} */
+table{
+  border: 1px solid #FCEDDA;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+th{
+  text-align: center;
+  color:rgba(157,170,249,1);
+  border-bottom:1px solid #FCEDDA;
+}
+
+td{
+  text-align: center;
+  color:#FCEDDA ;
+  border-bottom:1px solid #FCEDDA;
+}
+td:hover{
+  background-color: #FCEDDA;
+  color:rgba(157,170,249,1) ;
+}
 ul {
     list-style-type: none;
     margin: 0;
@@ -34,14 +72,14 @@ ul {
           text-align:center;/*居中*/
      
       } 
-      a:link, a:visited {
+      /* a:link, a:visited {
     background-color: #EE4E34;
     color: #FCEDDA;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
     display: inline-block;
-  }
+  } */
   
   a:hover, a:active {
     background-color: #EE4E34;
@@ -68,7 +106,7 @@ ul {
     border: 1px solid #EE4E34;
     border-radius: 4px;
     box-sizing: border-box;
-    opacity: 0.5;
+    opacity: 0.7;
   }
   
   input[type=submit] {
@@ -86,7 +124,7 @@ ul {
     background-color: #EE4E34;
   }
   
-  div {
+  .divAdd{
     border-radius: 5px;
     background-color: #EE4E34;
     padding: 20px;
@@ -94,31 +132,28 @@ ul {
     position:relative;
     left: 20%;
     bottom: 50%;
-    
+    width: 400px;
+    height: 500px;
+    display: inline-block;
+    /* float: left; */
   }
+  .divAdd:hover{
+    background-color: #EE4E34;
+    opacity: 0.8;
+  }
+  .add{
+    color: rgb(1, 5, 28);
+    text-align: center;
+  }
+  .selectsize{
+width: 350;
+height: 300px;
+  }
+
 .popup{
 position: relative;
 display: inline-block;
 cursor:pointer;
-
-}
-
-.zhezhao{
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  background: #000;
-  width: 100%;
-  height: 100%;
-  opacity: 0.5;
-}
-.tankuang{
-  position: relative;
-  background: #fff;
-  width: 50%;
-  height: 80%;
-  border-radius: 5px;
-  margin: 5% auto;
 }
 #header{
   height: 40px;
@@ -133,4 +168,46 @@ cursor:pointer;
   right: 5px;
   top: 5px;
   text-align: center;
+}
+.pop{
+  position: absolute;
+  left: 30%;
+  top:20%;
+  /* transform: translate(-20%,-20%); */
+}
+
+.device{
+  font-family: "OpenSansLight";
+  font-size: large;
+  font-weight: bolder;
+}
+
+.group_title{
+  
+  font-family: "OpenSansLight";
+  font-size: larger;
+  font-weight: bolder;
+
+}
+
+#add_group_btn{
+  
+  font-family: "OpenSansLight";
+  font-size: larger;
+  font-weight: bolder;
+}
+
+@media (max-width: 800px) {
+  .pop {
+    margin-top: 200px;
+    margin-right: 600px;
+    position: absolute;
+    align-self: center;
+    left: 0;
+  }
+  
+  .navbar{
+    width: 100%;
+  }
+
 }

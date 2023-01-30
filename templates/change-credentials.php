@@ -43,11 +43,13 @@ if(isset($_POST['submit'])) {
 
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>User Credentials</title>
-    <link rel="stylesheet" href="../static/css/myacc.css">
-  </head>
-  <body>
+
+<head>
+  <title>User Credentials</title>
+  <link rel="stylesheet" href="../static/css/myacc.css">
+</head>
+
+<body>
   <?php
 require_once("navbar.php");
 ?>
@@ -71,8 +73,7 @@ require_once("navbar.php");
       <input type="submit" name="submit" value="Update Credentials">
     </form>
   </div>
-  <?php
-  require_once("Footer.php");
-  ?>
-  </body>
+
+</body>
+
 </html>
