@@ -3,6 +3,8 @@
  
   var myChart = echarts.init(document.querySelector(".bar .chart"));
  
+ 
+
   var option = {
     color: ["#ee3e34"],
     tooltip: {
@@ -24,13 +26,13 @@
       {
         type: "category",
         data: [
-          "S1",
-          "S2",
-          "S3",
-          "S4",
-          "S5",
-          "S6",
-          "S7"
+          "1",
+          "1",
+          "2",
+          "4",
+          "f",
+          "f",
+          "g"
         ],
         axisTick: {
           alignWithLabel: true
@@ -71,7 +73,7 @@
         name: "week",
         type: "bar",
         barWidth: "35%",
-        data: [200, 300, 300, 900, 1500, 1200, 600],
+        data: [0, 0, 0, 0, 0, 1200, 600],
         itemStyle: {
           barBorderRadius: 5
         }
@@ -184,7 +186,7 @@
   });
 })();
 
-// Folding Line Chart
+// Folding Line Chart-month report
 (function() {
   var yearData = [
     {
@@ -310,9 +312,40 @@
   });
 })();
 
-// Folding Line Chart
+// Folding Line Chart-water electronic
 (function() {
   var myChart = echarts.init(document.querySelector(".line2 .chart"));
+console.log(1);
+  var  consumptionamout=[];
+  console.log(2);
+  function TestAjax(){
+    $.ajax({
+      type:"post",
+      async:false,
+      url:"../templates/report.php",
+      data:{},
+      dataType:"json",
+      success:function(result){
+        if(result){
+          for(var i=0; i<result.length; i++){
+            consumptionamout.push(result[i].consumption_amount);
+            console.log(result[i].consumption_amount);
+          }
+
+        }
+      },
+      error:function(errmsg){
+        alert("error!"+ errmsg);
+      }
+    })
+    console.log(3);
+    return consumptionamout;
+  }
+
+  TestAjax();
+console.log(consumptionamout);
+
+
   var option = {
     tooltip: {
       trigger: "axis"
@@ -333,43 +366,13 @@
       bottom: "10",
       containLabel: true
     },
+
     xAxis: [
       {
         type: "category",
         boundaryGap: false,
         
-        data: [
-          "01",
-          "02",
-          "03",
-          "04",
-          "05",
-          "06",
-          "07",
-          "08",
-          "09",
-          "10",
-          "11",
-          "12",
-          "13",
-          "14",
-          "15",
-          "16",
-          "17",
-          "18",
-          "19",
-          "20",
-          "21",
-          "22",
-          "23",
-          "24",
-          "25",
-          "26",
-          "26",
-          "28",
-          "29",
-          "30"
-        ],
+        data: date,
         
         axisLabel: {
           textStyle: {
@@ -385,6 +388,7 @@
         }
       }
     ],
+
     yAxis: [
       {
         type: "value",
@@ -418,7 +422,7 @@
           color: "#ee4e34",
           width: "2"
         },
-        // 填充颜色设置
+        
         areaStyle: {
           color: new echarts.graphic.LinearGradient(
             0,
@@ -451,38 +455,7 @@
           borderColor: "rgba(245, 41, 0, 0.897)",
           borderWidth: 12
         },
-        data: [
-          30,
-          40,
-          30,
-          40,
-          30,
-          40,
-          30,
-          60,
-          20,
-          40,
-          30,
-          40,
-          30,
-          40,
-          30,
-          40,
-          30,
-          60,
-          20,
-          40,
-          30,
-          40,
-          30,
-          40,
-          30,
-          40,
-          20,
-          60,
-          50,
-          40
-        ]
+        data: consumptionamout
       },
       {
         name: "Electricity",
@@ -528,38 +501,7 @@
         },
        
         showSymbol: false,
-        data: [
-          130,
-          10,
-          20,
-          40,
-          30,
-          40,
-          80,
-          60,
-          20,
-          40,
-          90,
-          40,
-          20,
-          140,
-          30,
-          40,
-          130,
-          20,
-          20,
-          40,
-          80,
-          70,
-          30,
-          40,
-          30,
-          120,
-          20,
-          99,
-          50,
-          20
-        ]
+        data: [0,0,0,10]
       }
     ]
   };
@@ -569,6 +511,7 @@
     myChart.resize();
   });
 })();
+
 
 // Pie
 (function() {
@@ -680,9 +623,9 @@
           { value: 24, name: "Lille" },
           { value: 25, name: "Cherbourg" },
           { value: 20, name: "Rouen" },
-          { value: 25, name: "Nancy" },
-          { value: 30, name: "Brest" },
-          { value: 42, name: "Orleans" }
+          { value: 25, name: "11" },
+          { value: 30, name: "33" },
+          { value: 42, name: "22" }
         ]
       }
     ]

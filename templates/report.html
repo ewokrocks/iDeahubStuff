@@ -50,6 +50,7 @@
           <div class="chart"></div>
           <div class="panel-footer"></div>
         </div>
+
         <div class="panel line">
           <h2>
             Month Report  <a href="javacript:;"></a
@@ -71,11 +72,17 @@
           <div class="chart">chart</div>
           <div class="panel-footer"></div>
         </div>
+
         <div class="panel line2">
           <h2>Consumption of water and electricity</h2>
           <div class="chart">chart</div>
           <div class="panel-footer"></div>
+
+          <script type = "text/javascript">
+            
+          </script>
         </div>
+
         <div class="panel pie2">
           <h2>Distribution of city</h2>
           <div class="chart">chart</div>
@@ -90,19 +97,3 @@
     <script src="../static/js/report.js"></script>
   </body>
 </html>
-
-<?php    header ( "Content-type:text/html;charset=utf-8" );
-
-$servername="127.0.0.1:4306";
-$username="root";
-$password="";
-$dbname="mydata";
-
-$conn = mysqli_connect($servername,$username,$password,$dbname);
-
-    $conn->set_charset('utf8');
-
-    mysqli_query($conn,$sql) or die(mysqli_error($conn));
-
-    echo("successfully！！")     ?>
-
