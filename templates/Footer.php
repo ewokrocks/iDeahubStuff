@@ -61,7 +61,7 @@
 
                     <h4> Contact us </h4>
                     <ul>
-                        <li><a href="#"></a> </li>
+                        <li><a href="/templates/contact us.php"></a> </li>
                     </ul>
 
                 </div>

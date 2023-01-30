@@ -1,3 +1,6 @@
+<?php include "db.php" ?>
+
+
 <html>
   <head>
     <style>
@@ -46,6 +49,7 @@
     </style>
   </head>
   <body>
+
     <form action="" method="post">
       <input type="password" name="password" placeholder="Enter new password" required>
       <input type="password" name="confirm_password" placeholder="Confirm new password" required>
@@ -57,6 +61,7 @@
           $password = $_POST['password'];
           $confirm_password = $_POST['confirm_password'];
           if ($password == $confirm_password) {
+            $sql = "UPDATE users SET password = '$password'";
             echo '<p class="match">Passwords match</p>';
           } else {
             echo '<p class="mismatch">Passwords do not match</p>';
