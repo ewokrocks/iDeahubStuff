@@ -117,22 +117,6 @@ mysqli_close($db);
         </div>
     </div>
 
-    <div class="block__item">
-        <div class="square4">
-            <div class="nameofgrouptext">Name of group<a href="page2.html"><img class="arrow"
-                        src="../static/images/arrow1.svg"></a></div>
-
-        </div>
-    </div>
-
-    <div class="block__item1">
-        <div class="square5">
-            <div class="nameofgrouptext">Name of group<a href="page2.html"><img class="arrow"
-                        src="../static/images/arrow1.svg"></a></div>
-
-        </div>
-    </div>
-
     <div class="block__item1">
         <div class="square6">
             <div class="nameofgrouptext">Name of group<a href="page2.html"><img class="arrow"
