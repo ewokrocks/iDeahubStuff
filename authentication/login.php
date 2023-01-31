@@ -1,6 +1,7 @@
 <?php
+error_reporting(E_ALL ^ E_WARNING);
 session_start();
-$current_user_email = $_SESSION['email'];
+
 
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
@@ -30,6 +31,7 @@ if (isset($_POST['submit'])) {
         if (mysqli_num_rows($result) == 1) {
             // Create a session and set the email
             $_SESSION['email'] = $email;
+            $current_user_email = $_SESSION['email'];
 
             // Create a cookie and set the email
             setcookie("email", $email, time() + (86400 * 30), "/");
@@ -63,16 +65,16 @@ require_once __DIR__ . '/../templates/navbar.php';
 <body>
     <div class="form-container">
         <form action="login.php" method="post">
-        <h1 class="fancy-title">Log In</h1>
+            <h1 class="fancy-title">Log In</h1>
             <input type="email" name="email" placeholder="Email">
             <input type="password" name="password" placeholder="Password">
             <input type="submit" name="submit" value="GO!">
         </form>
         <br>
-    
+
         <p><a href="forgotpass.php">Forgot Password?</a></p>
         <br>
-       <p><a href="register.php">Don't have an account?</a></p>
+        <p><a href="register.php">Don't have an account?</a></p>
 
         <?php if (!empty($error)) { ?>
             <p class="error">

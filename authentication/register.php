@@ -64,7 +64,8 @@ if (isset($_POST['submit'])) {
                 VALUES ('$name', '$surname', '$email', '$password')";
 
         if (mysqli_query($conn, $sql)) {
-            echo "New user added successfully.";
+            header("location:signup-success.html");
+            
         } else {
             echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
