@@ -73,21 +73,65 @@
     <input type="password" name="confir-password" placeholder="Confirm new password" required>
     <input type="submit" value="Submit">
   </form>
-  <div class="message">
-    
-    <?php
-    if (isset($_POST['password']) && isset($_POST['confirm_password'])) {
-      $password = $_POST['password'];
-      $confirm_password = $_POST['confirm_password'];
-      if ($password == $confirm_password) {
-        echo '<p class="match">Passwords match</p>';
-      } else {
-        echo '<p class="mismatch">Passwords do not match</p>';
-      }
-    }
-    ?>
 
-  </div>
+  <?php
+  session_start();
+
+  $current_user_email = $_SESSION['email'];
+  echo $current_user_email;
+
+  if (isset($_POST['submit'])) {
+    $currentPassword = $_POST['current-password'];
+    $newPassword = $_POST['new-password'];
+    $confirmPassword = $_POST['confir-password'];
+
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "smarthome";
+
+    // Create connection
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+    }
+
+    // get user id of the logged in user
+    $current_user_email = $_SESSION['email'];
+
+    // prepared statement to get current password of the user
+    $stmt = $conn->prepare("SELECT password FROM users WHERE email = ?");
+    $stmt->bind_param("s", $current_user_email);
+    $stmt->execute();
+    $result = $stmt->get_result();
+    $row = $result->fetch_assoc();
+    $stmt->close();
+
+    // check if the current password is correct
+    if ($row['password'] === $currentPassword) {
+      // check if the new password and confirm password match
+      if ($newPassword === $confirmPassword) {
+        // prepared statement to update the password
+        $stmt = $conn->prepare("UPDATE users SET password = ? WHERE email = ?");
+        $stmt->bind_param("ss", $newPassword, $current_user_email);
+        if ($stmt->execute()) {
+          echo "Password updated successfully";
+        } else {
+          echo "Error updating password";
+        }
+        $stmt->close();
+      } else {
+        echo "New password and confirm password do not match";
+      }
+    } else {
+      echo "Incorrect current password";
+    }
+
+    $conn->close();
+  }
+
+  ?>
 
 
 </body>
