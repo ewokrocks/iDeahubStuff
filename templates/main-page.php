@@ -42,16 +42,29 @@ if (!$result) {
 $row = mysqli_fetch_array($result);
 
 // Get the the result
+$userId = $row[0];
 $name = $row[1];
 $surname = $row[2];
 $num_devices = $row[3];
 
+$query = "SELECT GroupName FROM DeviceGroup WHERE UserID = $userId";
+$result = mysqli_query($db, $query);
+
+if (mysqli_num_rows($result) > 0) {
+    while ($row = mysqli_fetch_assoc($result)) {
+        $groupNames[] = $row['GroupName'];
+        // echo "<li>$groupName</li>";
+    }
+} else {
+    echo "<p>No group found for this user</p>";
+}
 
 // Close the database connection
 mysqli_close($db);
 
 // Print the number of devices
 // echo "Number of devices: " . $num_devices;
+
 ?>
 
 
@@ -91,7 +104,7 @@ mysqli_close($db);
     <div class="block__item">
         <div class="square2">
             <div class="nameofgrouptext">
-                <p style="color: #FCEDDA;">Devices connected:
+                <p style="color: #FCEDDA;">Total devices connected:
                     <?php echo $num_devices; ?>
                 </p>
             </div>
@@ -99,39 +112,20 @@ mysqli_close($db);
         </div>
     </div>
 
+    <?php for ($i = 0; $i < count($groupNames); $i++) { ?>
+        <div class="block__item1">
+            <div class="square7">
+                <div class="nameofgrouptext">
 
-    <div class="block__item">
-        <div class="square2">
-            <div class="nameofgrouptext">Name of group<a href="page2.html"><img class="arrow"
-                        src="../static/images/arrow1.svg"></a></div>
+                    <?php echo $groupNames[$i]; ?>
 
+
+                    <a href="page2.html"><img class="arrow" src="../static/images/arrow1.svg"></a>
+                </div>
+                <img class="arrow" src="../static/images/arrow1.svg">
+            </div>
         </div>
-    </div>
-
-
-    <div class="block__item">
-        <div class="square3">
-            <div class="nameofgrouptext">Name of group<a href="page2.html"><img class="arrow"
-                        src="../static/images/arrow1.svg"></a></div>
-
-        </div>
-    </div>
-
-    <div class="block__item1">
-        <div class="square6">
-            <div class="nameofgrouptext">Name of group<a href="page2.html"><img class="arrow"
-                        src="../static/images/arrow1.svg"></a></div>
-
-        </div>
-    </div>
-
-    <div class="block__item1">
-        <div class="square7">
-            <div class="nameofgrouptext">Name of group<a href="page2.html"><img class="arrow"
-                        src="../static/images/arrow1.svg"></a></div>
-            <img class="arrow" src="../static/images/arrow1.svg">
-        </div>
-    </div>
+    <?php } ?>
 
     <div class="block__item1">
         <div class="square8">
