@@ -5,11 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Report</title>
     <link rel="stylesheet" href="../static/css/report.css" />
-    <script src="../static/js/echarts.min.js"></script>
-     <script src="../static/js/jquery-1.9.1.min.js"></script>
   </head>
   <body>
-    
+    <!-- header -->
     <header>
       <h1>Report</h1>
       <div class="showTime"></div>
@@ -44,15 +42,14 @@
       </script>
     </header>
 
-    <!-- main -->
-    <section class="mainbox">
+     <!-- main -->
+     <section class="mainbox">
       <div class="column">
         <div class="panel bar">
           <h2>Week report</h2>
           <div class="chart"></div>
           <div class="panel-footer"></div>
         </div>
-
         <div class="panel line">
           <h2>
             Month Report  <a href="javacript:;"></a
@@ -65,7 +62,7 @@
           <h2>Age</h2>
           <div class="chart">chart</div>
           <div class="panel-footer"></div>
-        </div> 
+        </div>
       </div>
     
       <div class="column">
@@ -74,212 +71,11 @@
           <div class="chart">chart</div>
           <div class="panel-footer"></div>
         </div>
-
         <div class="panel line2">
           <h2>Consumption of water and electricity</h2>
-          <div class="chart">
-          chart
-          <script type="text/javascript">
-            var myChart = echarts.init(document.querySelector(".line2 .chart"));
-  var  consumption=[];
-  var day=[];
-  console.log(1);
-  function TestAjax(){
-    $.ajax({
-      type:"post",
-      async:false,
-      url:"report.php",
-      data:{},
-      dataType:"json",
-      success:function(result){
-        if(result){
-          for(var i=0; i<result.length; i++){
-            consumption.push(result[i].Consumption_amount);
-            day.push(result[i].DeviceDatald);
-            console.log(result[i].DeviceDatald);
-          }
-console.log(2);
-        }
-      }
-    })
-      return consumption, day;
-  }
-
-  TestAjax();
-
-
-
-  var option = {
-    tooltip: {
-      trigger: "axis"
-    },
-    legend: {
-      top: "0%",
-      data: ['day','amount'],
-      textStyle: {
-        color: "rgba(245, 41, 0, 0.897)",
-        fontSize: "12"
-      }
-    },
-
-    grid: {
-      left: "10",
-      top: "30",
-      right: "10",
-      bottom: "10",
-      containLabel: true
-    },
-
-    xAxis: [
-      {
-        type: "category",
-        boundaryGap: false,
-        data:day,
-        
-        axisLabel: {
-          textStyle: {
-            color: "rgba(245, 41, 0, 0.897)",
-            fontSize: 12
-          }
-        },
-        
-        axisLine: {
-          lineStyle: {
-            color: "rgba(245, 41, 0, 0.897)"
-          }
-        }
-      }
-    ],
-                          
-    yAxis: [
-      {
-        type: "value",
-        axisTick: { show: false },
-        axisLine: {
-          lineStyle: {
-            color: "rgba(245, 41, 0, 0.897)"
-          }
-        },
-        axisLabel: {
-          textStyle: {
-            color: "rgba(245, 41, 0, 0.897)",
-            fontSize: 12
-          }
-        },
-        
-        splitLine: {
-          lineStyle: {
-            color: "rgba(245, 41, 0, 0.897)"
-          }
-        }
-      }
-    ],
-    series: [
-      {
-        name: "Water",
-        type: "line",
-        smooth: true,
-        
-        lineStyle: {
-          color: "#ee4e34",
-          width: "2"
-        },
-        
-        areaStyle: {
-          color: new echarts.graphic.LinearGradient(
-            0,
-            0,
-            0,
-            1,
-            [
-              {
-                offset: 0,
-                color: "rgba(245, 41, 0, 0.897)" 
-              },
-              {
-                offset: 0.8,
-                color: "rgba(1, 132, 213, 0.5)" 
-              }
-            ],
-            false
-          ),
-          shadowColor: "rgba(0, 0, 0, 0.1)"
-        },
-       
-        symbol: "circle",
-        
-        symbolSize: 8,
-      
-        showSymbol: false,
-    
-        itemStyle: {
-          color: "#ee0e34",
-          borderColor: "rgba(245, 41, 0, 0.897)",
-          borderWidth: 12
-        },
-        data: consumption,
-      },
-
-
-      // {
-      //   name: "Electricity",
-      //   type: "line",
-      //   smooth: true,
-      //   lineStyle: {
-      //     normal: {
-      //       color: "#ee4e34",
-      //       width: 2
-      //     }
-      //   },
-      //   areaStyle: {
-      //     normal: {
-      //       color: new echarts.graphic.LinearGradient(
-      //         0,
-      //         0,
-      //         0,
-      //         1,
-      //         [
-      //           {
-      //             offset: 0,
-      //             color: "rgba(245, 41, 0, 0.897)"
-      //           },
-      //           {
-      //             offset: 0.8,
-      //             color: "rgba(245, 41, 0, 0.5)"
-      //           }
-      //         ],
-      //         false
-      //       ),
-      //       shadowColor: "rgba(0, 0, 0, 0.1)"
-      //     }
-      //   },
-       
-      //   symbol: "circle",
-        
-      //   symbolSize: 5,
-        
-      //   itemStyle: {
-      //     color: "#00d887",
-      //     borderColor: "rgba(245, 41, 0, 0.897)",
-      //     borderWidth: 12
-      //   },
-       
-      //   showSymbol: false,
-      //   data: ['10','5','50'],
-      // }
-    ]
-  };
-  if (option && typeof option === "object") {
-    myChart.setOption(option, true);
-}
- 
-  window.addEventListener("resize", function() {
-    myChart.resize();
-  });
-           </script>
-          </div>
-          <div class="panel-footer"></div>        </div>
-
+          <div class="chart">chart</div>
+          <div class="panel-footer"></div>
+        </div>
         <div class="panel pie2">
           <h2>Distribution of city</h2>
           <div class="chart">chart</div>
@@ -288,8 +84,9 @@ console.log(2);
       </div>
     </section>
 
-    <script src="../static/js/flexible.js"></script>
-    <script src="../static/js/report.js"></script>
-
+    <script src="js/flexible.js"></script>
+    <script src="js/echarts.min.js"></script>
+     <script src="js/jquery.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
