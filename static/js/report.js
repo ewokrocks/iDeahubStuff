@@ -484,6 +484,8 @@
           40
         ]
       },
+
+      
       {
         name: "Electricity",
         type: "line",
