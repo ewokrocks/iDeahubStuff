@@ -49,7 +49,8 @@ CREATE TABLE `message`(
 
 alter table Group add column `image`;
 
-
+INSERT INTO device (DeviceId, DeviceName, DeviceStatus,UserID)
+VALUES ('1','Washing Machine','0','15');
 
 
 

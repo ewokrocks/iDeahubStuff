@@ -1,109 +1,55 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700;800&display=swap');
 
-a{
+*{
     font-family: 'Open Sans', sans-serif;
-    color: #EE4E34; 
-    font-weight: bold;
+    ;
 }
 
-.container {
-    position: relative;
-    max-width: 430px;
-    width: 100%;
+body{
+    font-family: 'Open Sans', sans-serif;
+}
+
+form {
     background-color: #EE4E34;
-    padding: 30px;
-    border-radius: 25px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-img {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-}
-
-p {
-    color: #fcedda;
-    margin-bottom: 20px;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.innercontainer {
-    position: relative;
-    font-family: 'Open Sans', sans-serif;
-    max-width: 430px;
+    padding: 20px;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    border-radius: 10px;
+  }
+  
+  .form-field {
+    margin: 10px 0;
     width: 100%;
-    background-color: #fcedda;
-    padding: 30px;
-    border-radius: 25px;
-}
-
-.innercontainer .input-field {
-    position: relative;
-    height: 30px;
-    width: 75%;
-    margin-top: 5px;
-    align-items: center;
-    text-align: center;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.input-field input {
-    position: relative;
-    width: 130%;
-    height: 90%;
-    padding: 0 35px;
-    border-color: #EE4E34;
-    border-style: solid;
-    border-radius: 25px;
-    align-items: center;
-    font-family: 'Open Sans', sans-serif;
-}
-
- ::placeholder {
-    color: #EE4E34;
-    text-align: center;
-    font-size: medium;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.line {
-    color: #EE4E34;
-    text-align: center;
-    font-size: medium;
-    font-weight: bold;
-    margin-top: 20px;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.line a {
-    color: #EE4E34;
-    font-weight: bold;
-}
-
-button {
-    background-color: #9DAAF2;
-    border-radius: 25px;
-    border-color: #9DAAF2;
-    border-style: solid;
-    color: #fcedda;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    width: 100%;
+    padding: 10px;
     font-size: 16px;
-    width: 100%;
-    height: 75%;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  input[type="submit"] {
+    background-color: #fff;
+    color: #EE4E34;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
     margin-top: 20px;
-    font-weight: bold;
-    font-family: 'Open Sans', sans-serif;
-}
-
-.container{
-
-    position: absolute;
-    left: 50%;
-    transform: translate(-50%, 3%);
-    height: 570px;
-    
-}
+    cursor: pointer;
+  }
+  
+  @media only screen and (max-width: 500px) {
+    form {
+      width: 90%;
+    }
+  }
+  
