@@ -317,7 +317,10 @@
   var myChart = echarts.init(document.querySelector(".line2 .chart"));
 console.log(1);
   var  consumptionamout=[];
+  var d=[]
+
   console.log(2);
+
   function TestAjax(){
     $.ajax({
       type:"post",
@@ -329,21 +332,17 @@ console.log(1);
         if(result){
           for(var i=0; i<result.length; i++){
             consumptionamout.push(result[i].consumption_amount);
-            console.log(result[i].consumption_amount);
+            d.push(result[i].Day);
           }
 
         }
-      },
-      error:function(errmsg){
-        alert("error!"+ errmsg);
       }
     })
-    console.log(3);
-    return consumptionamout;
+      return consumptionamout;
   }
 
   TestAjax();
-console.log(consumptionamout);
+
 
 
   var option = {
@@ -352,7 +351,7 @@ console.log(consumptionamout);
     },
     legend: {
       top: "0%",
-      data: ["S1", "S2", "S3", "S4", "S5"],
+      data: ['day','amount'],
       textStyle: {
         color: "rgba(245, 41, 0, 0.897)",
         fontSize: "12"
@@ -372,7 +371,7 @@ console.log(consumptionamout);
         type: "category",
         boundaryGap: false,
         
-        data: date,
+        data:d,
         
         axisLabel: {
           textStyle: {
@@ -432,11 +431,11 @@ console.log(consumptionamout);
             [
               {
                 offset: 0,
-                color: "rgba(245, 41, 0, 0.897)" // 渐变色的起始颜色
+                color: "rgba(245, 41, 0, 0.897)" 
               },
               {
                 offset: 0.8,
-                color: "rgba(1, 132, 213, 0.5)" // 渐变线的结束颜色
+                color: "rgba(1, 132, 213, 0.5)" 
               }
             ],
             false
@@ -455,7 +454,7 @@ console.log(consumptionamout);
           borderColor: "rgba(245, 41, 0, 0.897)",
           borderWidth: 12
         },
-        data: consumptionamout
+        data: consumptionamout,
       },
       {
         name: "Electricity",
@@ -501,11 +500,13 @@ console.log(consumptionamout);
         },
        
         showSymbol: false,
-        data: [0,0,0,10]
+        data: consumptionamout,
       }
     ]
   };
-  myChart.setOption(option);
+  if (option && typeof option === "object") {
+    myChart.setOption(option, true);
+}
  
   window.addEventListener("resize", function() {
     myChart.resize();
