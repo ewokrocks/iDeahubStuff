@@ -97,7 +97,8 @@ insert into devicedata(Comsumption_type,Day,Consumption_amount) value ('water','
 
 
 
-
+INSERT INTO device (DeviceId, DeviceName, DeviceStatus,UserID)
+VALUES ('1','Washing Machine','0','15');
 
 
 

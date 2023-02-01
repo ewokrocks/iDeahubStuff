@@ -1,43 +1,76 @@
 <?php include "db.php" ?>
-
 <?php
 
-if (isset($_POST['register'])) {
+// Connect to database
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "smarthome";
 
-    $username = $_POST['name'];
-    $lastname = $_POST['surname'];
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+// Check connection
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+
+// Check if form is submitted
+if (isset($_POST['submit'])) {
+    // Get form data
+    $name = $_POST['name'];
+    $surname = $_POST['surname'];
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
-    global $con;
+    $verify_password = $_POST['verify_password'];
 
-    $sql = "INSERT INTO user (name, surname,email, password_hash)
-        VALUES (?, ?, ?, ?)";
-    $stmt = $mysqli->stmt_init();
-    if (!$stmt->prepare($sql)) {
-        die("SQL error: " . $mysqli->error);
+    // Initialize error message
+    $error = "";
+
+    // Validate name
+    if (empty($name)) {
+        $error .= "Name is required.<br>";
     }
 
-    $stmt->bind_param(
-        "ssss",
-        $_POST["surname"],
-        $_POST["name"],
-        $_POST["email"],
-        $password
-    );
+    // Validate surname
+    if (empty($surname)) {
+        $error .= "Surname is required.<br>";
+    }
 
-    if ($stmt->execute()) {
+    // Validate email
+    if (empty($email)) {
+        $error .= "Email is required.<br>";
+    } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error .= "Invalid email format.<br>";
+    }
 
-        header("Location: signup-success.html");
-        exit;
+    // Validate password
+    if (empty($password)) {
+        $error .= "Password is required.<br>";
+    } elseif (strlen($password) < 8) {
+        $error .= "Password must be at least 8 characters long.<br>";
+    }
 
-    } else {
+    // Validate verify password
+    if (empty($verify_password)) {
+        $error .= "Verify password is required.<br>";
+    } elseif ($password != $verify_password) {
+        $error .= "Password and verify password do not match.<br>";
+    }
 
-        if ($mysqli->errno === 1062) {
-            die("email already taken");
+    // If there is no error, add user to database
+    if (empty($error)) {
+        // $password = password_hash($password, PASSWORD_DEFAULT);
+        $sql = "INSERT INTO users (name, surname, email, password)
+                VALUES ('$name', '$surname', '$email', '$password')";
+
+        if (mysqli_query($conn, $sql)) {
+            header("location:signup-success.html");
+            
         } else {
-            die($mysqli->error . " " . $mysqli->errno);
+            echo "Error: " . $sql . "<br>" . mysqli_error($conn);
         }
+    } else {
+        echo $error;
     }
 }
 
@@ -47,11 +80,12 @@ if (isset($_POST['register'])) {
 <html lang="en">
 
 <head>
+
     <meta charset="ISO-8859-1">
     <title>Registration form</title>
     <link rel="stylesheet" type="text/css" href="../static/css/register.css">
-</head>
 
+</head>
 
 <body style="background-color:#FCEDDA;">
 
@@ -61,56 +95,37 @@ if (isset($_POST['register'])) {
 
     ?>
 
+    <br>
 
-    <br> <br>
-
-    <div class="container">
-
+    <form action="" method="post">
+        <br>
         <img src="../static/images/SmartHome.png">
-        <p>&nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp Best way to impress your house</p>
-
-        <div class="innercontainer">
-
-            <form action="../authentication/register.php" name="register" method="POST" id="register" novalidate>
-
-                <div class="input-field"><input type="text" name="name" placeholder="Name" required></div>
-
-
-                <div class="input-field"><input type="text" name="surname" placeholder="Surname" required></div>
-
-
-                <div class="input-field"><input type="email" name="email" placeholder="Email address" required></div>
-
-
-                <div class="input-field"><input type="password" name="password" placeholder="Password" required></div>
-
-
-                <div class="input-field"><input type="password" name="password_confirmation"
-                        placeholder="Confirm Password" required></div>
-
-
-                <button type="submit" name="register" value="Submit" id="button">Sign up</button><br>
-
-            </form>
-
-            <div class="line">
-                Already have an account!
-                <a href="login.php">Login here</a>
-            </div>
-
+        <br>
+        <div class="form-field">
+            <input type="text" name="name" placeholder="Name" id="name">
+            <div class="error-message" id="nameError"></div>
         </div>
+        <div class="form-field">
+            <input type="text" name="surname" placeholder="Surname" id="surname">
+            <div class="error-message" id="surnameError"></div>
+        </div>
+        <div class="form-field">
+            <input type="email" name="email" placeholder="Email" id="email">
+            <div class="error-message" id="emailError"></div>
+        </div>
+        <div class="form-field">
+            <input type="password" name="password" placeholder="Password" id="password">
+            <div class="error-message" id="passwordError"></div>
+        </div>
+        <div class="form-field">
+            <input type="password" name="verify_password" placeholder="Verify Password" id="verifyPassword">
+            <div class="error-message" id="verifyPasswordError"></div>
+        </div>
+        <input type="submit" name="submit" value="Register!" onclick="return validateForm()">
+        <br>
+        <p style="color: #FCEDDA !important;"> <a href="login.php">Already have an account? Log in!</a></p>
+    </form>
 
-    </div>
-
-
-
-    <script type="text/javascript">
-        function save() {
-            var email = document.getElementById("email").value;
-            var pwd = document.getElementById("pwd").value;
-            alert("email" + email + "password" + pwd);
-        }
-    </script>
 
 </body>
 
