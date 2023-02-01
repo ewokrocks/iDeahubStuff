@@ -17,7 +17,7 @@ if (isset($_POST['submit'])) {
             } 
 
         }
-?>
+
 
     $conn = mysqli_connect ("localhost","root", "","smarthome") ;
 

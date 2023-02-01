@@ -45,8 +45,12 @@ CREATE TABLE `message`(
     `email` varchar(128),
     `type` varchar(64),
     `message` varchar(128)
-;
-)
+);
+
+alter table Group add column `image`;
+
+INSERT INTO device (DeviceId, DeviceName, DeviceStatus,UserID)
+VALUES ('1','Washing Machine','0','15');
 
 
 

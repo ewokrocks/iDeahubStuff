@@ -1,99 +1,89 @@
 <?php
+error_reporting(E_ALL ^ E_WARNING);
+session_start();
 
-include "db.php";
+
 if (isset($_POST['submit'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
-    $conn = mysqli_connect("localhost", "root", "", "smarthome");
 
-    $sql = "select * from user where email = '$email' and password_hash = '$password'";
-    $result = mysqli_query($conn, $sql);
-    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-    $count = mysqli_num_rows($result);
 
-    if ($count == 1) {
-        header("Location: ///localhost/iDeahubStuff/templates/main-page.html");
+    // Validate the email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $error = "Invalid email format.";
+    } else if (empty($password)) {
+        // Validate the password
+        $error = "Password is required.";
     } else {
-        echo '<script>
-                    alert("Login failed. Invalid username or password!!")
-                </script>';
+        // Connect to the database
+        $conn = mysqli_connect("localhost", "root", "", "smarthome");
+
+        // Check for connection errors
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+
+        // Check if the email and password exist in the database
+        $query = "SELECT * FROM users WHERE email = '$email' AND password = '$password'";
+        $result = mysqli_query($conn, $query);
+
+        // Check if the query is successful and the result has a row
+        if (mysqli_num_rows($result) == 1) {
+            // Create a session and set the email
+            $_SESSION['email'] = $email;
+            $current_user_email = $_SESSION['email'];
+
+            // Create a cookie and set the email
+            setcookie("email", $email, time() + (86400 * 30), "/");
+
+            // Redirect to the dashboard
+            header("Location: /../iDeahubStuff/templates/main-page.php");
+            exit();
+        } else {
+            $error = "Email or password is incorrect.";
+        }
+
+        // Close the database connection
+        mysqli_close($conn);
     }
 }
-
-
 ?>
 
+<!DOCTYPE html>
 <html>
 
 <head>
-    <title>Login</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="../static/css/login.css">
 
 </head>
+<?php
 
+require_once __DIR__ . '/../templates/navbar.php';
 
-<body style="background-color:#FCEDDA;">
+?>
 
-    <?php
-
-    require_once __DIR__ . '/../templates/navbar.php';
-
-    ?>
-
-    <div class="main">
-
-        <div class="title">
-            <div class="title_top"></div>
-            <br>
-            <div class="title_bottom">Log in</div>
-        </div>
-
-        <form action="login.php" onsubmit="return isvalid()" method="post">
-            <div class="content">
-
-                <div class="email"><label for="email">Email</label><br>
-                    <input type="text" name="email" value="" maxlength="200" id="email">
-                </div>
-
-                <div class="password"><label for="password">Password</label><br>
-                    <input type="text" name="password" value="" maxlength="200" id="password">
-                </div>
-
-                <div class="button">
-                    <div class="submit"><input type="submit" name="submit" value="Log in!"></div>
-
-                </div>
-
-                <a href="http://"> Forgot password? </a>
-
-            </div>
+<body>
+    <div class="form-container">
+        <form action="login.php" method="post">
+            <h1 class="fancy-title">Log In</h1>
+            <input type="email" name="email" placeholder="Email">
+            <input type="password" name="password" placeholder="Password">
+            <input type="submit" name="submit" value="GO!">
         </form>
+        <br>
 
+        <p><a href="forgotpass.php">Forgot Password?</a></p>
+        <br>
+        <p><a href="register.php">Don't have an account?</a></p>
+
+        <?php if (!empty($error)) { ?>
+            <p class="error">
+                <?php echo $error; ?>
+            </p>
+        <?php } ?>
     </div>
-
-    <script>
-        if (window.innerWidth > 600) {
-            document.write("<?php require_once '/../templates/footer.php'; ?>");
-        }
-        function isvalid() {
-            var user = document.form.user.value;
-            var pass = document.form.pass.value;
-            if (user.length == "" && pass.length == "") {
-                alert(" Username and password field is empty!!!");
-                return false;
-            }
-            else if (user.length == "") {
-                alert(" Username field is empty!!!");
-                return false;
-            }
-            else if (pass.length == "") {
-                alert(" Password field is empty!!!");
-                return false;
-            }
-
-        }
-    </script>
 
 
 </body>
+
+</html>
