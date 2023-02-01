@@ -19,11 +19,27 @@ body {
   line-height: 1.15;
 }
 .title{
-  margin: auto;
+  width: 100%;
+  margin: 0 auto;
+  height: 100px;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 45px;
+  color: #ee4e34;
+  text-align: center;
+  line-height: 100px;
 }
 
 .first{
-  margin: 0 auto;
+  margin-top: 30px;
+  width: 50%;
+  float: left;
+}
+
+.second{
+  margin-top: 30px;
+  width: 50%;
+  float: left;
+  background-color: black;
 }
 
 header {
