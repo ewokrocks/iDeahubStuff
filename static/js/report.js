@@ -312,206 +312,202 @@
   });
 })();
 
-// Folding Line Chart-water electronic
-(function() {
-  var myChart = echarts.init(document.querySelector(".line2 .chart"));
-console.log(1);
-  var  consumptionamout=[];
-  var d=[]
+//Folding Line Chart-water electronic
+// (function() {
+//   var myChart = echarts.init(document.querySelector(".line2 .chart"));
+//   var  consumption=[];
+//   var day=[];
+//   function TestAjax(){
+//     $.ajax({
+//       type:"post",
+//       async:false,
+//       url:"../templates/report.php",
+//       data:{},
+//       dataType:"json",
+//       success:function(result){
+//         if(result){
+//           for(var i=0; i<result.length; i++){
+//             consumption.push(result[i].Consumption_amount);
+//             day.push(result[i].DeviceDatald);
+//           }
 
-  console.log(2);
+//         }
+//       }
+//     })
+//       return consumption, day;
+//   }
 
-  function TestAjax(){
-    $.ajax({
-      type:"post",
-      async:false,
-      url:"../templates/report.php",
-      data:{},
-      dataType:"json",
-      success:function(result){
-        if(result){
-          for(var i=0; i<result.length; i++){
-            consumptionamout.push(result[i].consumption_amount);
-            d.push(result[i].Day);
-          }
-
-        }
-      }
-    })
-      return consumptionamout;
-  }
-
-  TestAjax();
+//   TestAjax();
 
 
 
-  var option = {
-    tooltip: {
-      trigger: "axis"
-    },
-    legend: {
-      top: "0%",
-      data: ['day','amount'],
-      textStyle: {
-        color: "rgba(245, 41, 0, 0.897)",
-        fontSize: "12"
-      }
-    },
+//   var option = {
+//     tooltip: {
+//       trigger: "axis"
+//     },
+//     legend: {
+//       top: "0%",
+//       data: ['day','amount'],
+//       textStyle: {
+//         color: "rgba(245, 41, 0, 0.897)",
+//         fontSize: "12"
+//       }
+//     },
 
-    grid: {
-      left: "10",
-      top: "30",
-      right: "10",
-      bottom: "10",
-      containLabel: true
-    },
+//     grid: {
+//       left: "10",
+//       top: "30",
+//       right: "10",
+//       bottom: "10",
+//       containLabel: true
+//     },
 
-    xAxis: [
-      {
-        type: "category",
-        boundaryGap: false,
+//     xAxis: [
+//       {
+//         type: "category",
+//         boundaryGap: false,
         
-        data:d,
+//         data:day,
         
-        axisLabel: {
-          textStyle: {
-            color: "rgba(245, 41, 0, 0.897)",
-            fontSize: 12
-          }
-        },
+//         axisLabel: {
+//           textStyle: {
+//             color: "rgba(245, 41, 0, 0.897)",
+//             fontSize: 12
+//           }
+//         },
         
-        axisLine: {
-          lineStyle: {
-            color: "rgba(245, 41, 0, 0.897)"
-          }
-        }
-      }
-    ],
-
-    yAxis: [
-      {
-        type: "value",
-        axisTick: { show: false },
-        axisLine: {
-          lineStyle: {
-            color: "rgba(245, 41, 0, 0.897)"
-          }
-        },
-        axisLabel: {
-          textStyle: {
-            color: "rgba(245, 41, 0, 0.897)",
-            fontSize: 12
-          }
-        },
+//         axisLine: {
+//           lineStyle: {
+//             color: "rgba(245, 41, 0, 0.897)"
+//           }
+//         }
+//       }
+//     ],
+                          
+//     yAxis: [
+//       {
+//         type: "value",
+//         axisTick: { show: false },
+//         axisLine: {
+//           lineStyle: {
+//             color: "rgba(245, 41, 0, 0.897)"
+//           }
+//         },
+//         axisLabel: {
+//           textStyle: {
+//             color: "rgba(245, 41, 0, 0.897)",
+//             fontSize: 12
+//           }
+//         },
         
-        splitLine: {
-          lineStyle: {
-            color: "rgba(245, 41, 0, 0.897)"
-          }
-        }
-      }
-    ],
-    series: [
-      {
-        name: "Water",
-        type: "line",
-        smooth: true,
+//         splitLine: {
+//           lineStyle: {
+//             color: "rgba(245, 41, 0, 0.897)"
+//           }
+//         }
+//       }
+//     ],
+//     series: [
+//       {
+//         name: "Water",
+//         type: "line",
+//         smooth: true,
         
-        lineStyle: {
-          color: "#ee4e34",
-          width: "2"
-        },
+//         lineStyle: {
+//           color: "#ee4e34",
+//           width: "2"
+//         },
         
-        areaStyle: {
-          color: new echarts.graphic.LinearGradient(
-            0,
-            0,
-            0,
-            1,
-            [
-              {
-                offset: 0,
-                color: "rgba(245, 41, 0, 0.897)" 
-              },
-              {
-                offset: 0.8,
-                color: "rgba(1, 132, 213, 0.5)" 
-              }
-            ],
-            false
-          ),
-          shadowColor: "rgba(0, 0, 0, 0.1)"
-        },
+//         areaStyle: {
+//           color: new echarts.graphic.LinearGradient(
+//             0,
+//             0,
+//             0,
+//             1,
+//             [
+//               {
+//                 offset: 0,
+//                 color: "rgba(245, 41, 0, 0.897)" 
+//               },
+//               {
+//                 offset: 0.8,
+//                 color: "rgba(1, 132, 213, 0.5)" 
+//               }
+//             ],
+//             false
+//           ),
+//           shadowColor: "rgba(0, 0, 0, 0.1)"
+//         },
        
-        symbol: "circle",
+//         symbol: "circle",
         
-        symbolSize: 8,
+//         symbolSize: 8,
       
-        showSymbol: false,
+//         showSymbol: false,
     
-        itemStyle: {
-          color: "#ee0e34",
-          borderColor: "rgba(245, 41, 0, 0.897)",
-          borderWidth: 12
-        },
-        data: consumptionamout,
-      },
-      {
-        name: "Electricity",
-        type: "line",
-        smooth: true,
-        lineStyle: {
-          normal: {
-            color: "#ee4e34",
-            width: 2
-          }
-        },
-        areaStyle: {
-          normal: {
-            color: new echarts.graphic.LinearGradient(
-              0,
-              0,
-              0,
-              1,
-              [
-                {
-                  offset: 0,
-                  color: "rgba(245, 41, 0, 0.897)"
-                },
-                {
-                  offset: 0.8,
-                  color: "rgba(245, 41, 0, 0.5)"
-                }
-              ],
-              false
-            ),
-            shadowColor: "rgba(0, 0, 0, 0.1)"
-          }
-        },
+//         itemStyle: {
+//           color: "#ee0e34",
+//           borderColor: "rgba(245, 41, 0, 0.897)",
+//           borderWidth: 12
+//         },
+//         data: consumption,
+//       },
+//       {
+//         name: "Electricity",
+//         type: "line",
+//         smooth: true,
+//         lineStyle: {
+//           normal: {
+//             color: "#ee4e34",
+//             width: 2
+//           }
+//         },
+//         areaStyle: {
+//           normal: {
+//             color: new echarts.graphic.LinearGradient(
+//               0,
+//               0,
+//               0,
+//               1,
+//               [
+//                 {
+//                   offset: 0,
+//                   color: "rgba(245, 41, 0, 0.897)"
+//                 },
+//                 {
+//                   offset: 0.8,
+//                   color: "rgba(245, 41, 0, 0.5)"
+//                 }
+//               ],
+//               false
+//             ),
+//             shadowColor: "rgba(0, 0, 0, 0.1)"
+//           }
+//         },
        
-        symbol: "circle",
+//         symbol: "circle",
         
-        symbolSize: 5,
+//         symbolSize: 5,
         
-        itemStyle: {
-          color: "#00d887",
-          borderColor: "rgba(245, 41, 0, 0.897)",
-          borderWidth: 12
-        },
+//         itemStyle: {
+//           color: "#00d887",
+//           borderColor: "rgba(245, 41, 0, 0.897)",
+//           borderWidth: 12
+//         },
        
-        showSymbol: false,
-        data: consumptionamout,
-      }
-    ]
-  };
-  if (option && typeof option === "object") {
-    myChart.setOption(option, true);
-}
+//         showSymbol: false,
+//         data: ['1','2','3'],
+//       }
+//     ]
+//   };
+//   if (option && typeof option === "object") {
+//     myChart.setOption(option, true);
+// }
  
-  window.addEventListener("resize", function() {
-    myChart.resize();
-  });
-})();
+//   window.addEventListener("resize", function() {
+//     myChart.resize();
+//   });
+// })();
 
 
 // Pie

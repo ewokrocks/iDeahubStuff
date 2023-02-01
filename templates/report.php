@@ -1,45 +1,30 @@
 <?php
-    header("content-type:text/json;charset=utf-8");
+   
     $host = "127.0.0.1:4306";
     $dbname = "smarthome";
     $username = "root";
     $password = "";
-    $conn = mysqli_connect($host, $username, $password, $dbname);
-
-    if (mysqli_connect_errno()) {
-        die("Connection error: " . mysqli_connect_errno());
+    require("sql_config.php");
+    $conn=mysqli_connect($host,$username,$password) or die("error connecting");
+    mysqli_query($conn,"set names 'utf8'"); 
+    mysqli_select_db($conn,$dbname); 
+    $result = mysqli_query($conn,"select * from devicedata");
+    $data="";
+    $array= array();
+    class User{
+      public $Consumption_amount;
+      public $DeviceDatald;
     }
-       
-        
-        $sql = "select consumption_amount,Day from `devicedata`";
-        $result = mysqli_query($conn,$sql);
-    
-    echo ("search success\n");
-
-    $data = "";
-    $array=array(); 
-    class devicedata{
-      public $consumption_amount;
-      public $Day;
+    while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+      $user=new User();
+      $user->Consumption_amount = $row['Consumption_amount'];
+      $user->DeviceDatald = $row['DeviceDatald'];
+      $array[]=$user;
     }
-
-
-    while($row = mysqli_fetch_row($result)){
-      list($consumption_amount)=$row;
-
-      $gz = new devicedata();
-      $gz -> consumption_amount = $row['consumption_amount'];
-      $gz -> Day = $row['Day'];
-
-      $array[] = $gz;
-    }
-
-    $sta = json_encode($array);
+    $data=json_encode($array);
+    // echo "{".'"user"'.":".$data."}";
     echo $data;
-
-
-?>
-
+  ?>
 
 
 
