@@ -18,6 +18,14 @@ body {
   background-size: cover;
   line-height: 1.15;
 }
+.title{
+  margin: auto;
+}
+
+.first{
+  margin: 0 auto;
+}
+
 header {
   position: relative;
   height: 1.25rem;
