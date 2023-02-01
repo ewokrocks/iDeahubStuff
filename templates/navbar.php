@@ -24,8 +24,8 @@
         <div class="navbar-links">
             <ul>
                 <li><a href="../templates/homepage.php">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">My account</a></li>
+                <li><a href="../core/about us.php">About</a></li>
+                <li><a href="../templates/change-credentials.php">My account</a></li>
             </ul>
         </div>
     </nav>
