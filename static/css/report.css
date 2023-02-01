@@ -29,18 +29,12 @@ body {
   line-height: 100px;
 }
 
-.first{
+.diagram{
   margin-top: 30px;
   width: 50%;
   float: left;
 }
 
-.second{
-  margin-top: 30px;
-  width: 50%;
-  float: left;
-  background-color: black;
-}
 
 header {
   position: relative;
