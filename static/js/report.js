@@ -3,8 +3,6 @@
  
   var myChart = echarts.init(document.querySelector(".bar .chart"));
  
- 
-
   var option = {
     color: ["#ee3e34"],
     tooltip: {
@@ -26,13 +24,13 @@
       {
         type: "category",
         data: [
-          "1",
-          "1",
-          "2",
-          "4",
-          "f",
-          "f",
-          "g"
+          "S1",
+          "S2",
+          "S3",
+          "S4",
+          "S5",
+          "S6",
+          "S7"
         ],
         axisTick: {
           alignWithLabel: true
@@ -73,7 +71,7 @@
         name: "week",
         type: "bar",
         barWidth: "35%",
-        data: [0, 0, 0, 0, 0, 1200, 600],
+        data: [200, 300, 300, 900, 1500, 1200, 600],
         itemStyle: {
           barBorderRadius: 5
         }
@@ -186,7 +184,7 @@
   });
 })();
 
-// Folding Line Chart-month report
+// Folding Line Chart
 (function() {
   var yearData = [
     {
@@ -312,140 +310,142 @@
   });
 })();
 
-//Folding Line Chart-water electronic
-// (function() {
-//   var myChart = echarts.init(document.querySelector(".line2 .chart"));
-//   var  consumption=[];
-//   var day=[];
-//   function TestAjax(){
-//     $.ajax({
-//       type:"post",
-//       async:false,
-//       url:"../templates/report.php",
-//       data:{},
-//       dataType:"json",
-//       success:function(result){
-//         if(result){
-//           for(var i=0; i<result.length; i++){
-//             consumption.push(result[i].Consumption_amount);
-//             day.push(result[i].DeviceDatald);
-//           }
+// Folding Line Chart
+(function() {
+  var myChart = echarts.init(document.querySelector(".line2 .chart"));
+  var option = {
+    tooltip: {
+      trigger: "axis"
+    },
+    legend: {
+      top: "0%",
+      data: ["S1", "S2", "S3", "S4", "S5"],
+      textStyle: {
+        color: "rgba(245, 41, 0, 0.897)",
+        fontSize: "12"
+      }
+    },
 
-//         }
-//       }
-//     })
-//       return consumption, day;
-//   }
-
-//   TestAjax();
-
-
-
-//   var option = {
-//     tooltip: {
-//       trigger: "axis"
-//     },
-//     legend: {
-//       top: "0%",
-//       data: ['day','amount'],
-//       textStyle: {
-//         color: "rgba(245, 41, 0, 0.897)",
-//         fontSize: "12"
-//       }
-//     },
-
-//     grid: {
-//       left: "10",
-//       top: "30",
-//       right: "10",
-//       bottom: "10",
-//       containLabel: true
-//     },
-
-//     xAxis: [
-//       {
-//         type: "category",
-//         boundaryGap: false,
+    grid: {
+      left: "10",
+      top: "30",
+      right: "10",
+      bottom: "10",
+      containLabel: true
+    },
+    xAxis: [
+      {
+        type: "category",
+        boundaryGap: false,
         
-//         data:day,
+        data: [
+          "01",
+          "02",
+          "03",
+          "04",
+          "05",
+          "06",
+          "07",
+          "08",
+          "09",
+          "10",
+          "11",
+          "12",
+          "13",
+          "14",
+          "15",
+          "16",
+          "17",
+          "18",
+          "19",
+          "20",
+          "21",
+          "22",
+          "23",
+          "24",
+          "25",
+          "26",
+          "26",
+          "28",
+          "29",
+          "30"
+        ],
         
-//         axisLabel: {
-//           textStyle: {
-//             color: "rgba(245, 41, 0, 0.897)",
-//             fontSize: 12
-//           }
-//         },
+        axisLabel: {
+          textStyle: {
+            color: "rgba(245, 41, 0, 0.897)",
+            fontSize: 12
+          }
+        },
         
-//         axisLine: {
-//           lineStyle: {
-//             color: "rgba(245, 41, 0, 0.897)"
-//           }
-//         }
-//       }
-//     ],
-                          
-//     yAxis: [
-//       {
-//         type: "value",
-//         axisTick: { show: false },
-//         axisLine: {
-//           lineStyle: {
-//             color: "rgba(245, 41, 0, 0.897)"
-//           }
-//         },
-//         axisLabel: {
-//           textStyle: {
-//             color: "rgba(245, 41, 0, 0.897)",
-//             fontSize: 12
-//           }
-//         },
+        axisLine: {
+          lineStyle: {
+            color: "rgba(245, 41, 0, 0.897)"
+          }
+        }
+      }
+    ],
+    yAxis: [
+      {
+        type: "value",
+        axisTick: { show: false },
+        axisLine: {
+          lineStyle: {
+            color: "rgba(245, 41, 0, 0.897)"
+          }
+        },
+        axisLabel: {
+          textStyle: {
+            color: "rgba(245, 41, 0, 0.897)",
+            fontSize: 12
+          }
+        },
         
-//         splitLine: {
-//           lineStyle: {
-//             color: "rgba(245, 41, 0, 0.897)"
-//           }
-//         }
-//       }
-//     ],
-//     series: [
-//       {
-//         name: "Water",
-//         type: "line",
-//         smooth: true,
+        splitLine: {
+          lineStyle: {
+            color: "rgba(245, 41, 0, 0.897)"
+          }
+        }
+      }
+    ],
+    series: [
+      {
+        name: "Water",
+        type: "line",
+        smooth: true,
         
-//         lineStyle: {
-//           color: "#ee4e34",
-//           width: "2"
-//         },
-        
-//         areaStyle: {
-//           color: new echarts.graphic.LinearGradient(
-//             0,
-//             0,
-//             0,
-//             1,
-//             [
-//               {
-//                 offset: 0,
-//                 color: "rgba(245, 41, 0, 0.897)" 
-//               },
-//               {
-//                 offset: 0.8,
-//                 color: "rgba(1, 132, 213, 0.5)" 
-//               }
-//             ],
-//             false
-//           ),
-//           shadowColor: "rgba(0, 0, 0, 0.1)"
-//         },
+        lineStyle: {
+          color: "#ee4e34",
+          width: "2"
+        },
+        // 填充颜色设置
+        areaStyle: {
+          color: new echarts.graphic.LinearGradient(
+            0,
+            0,
+            0,
+            1,
+            [
+              {
+                offset: 0,
+                color: "rgba(245, 41, 0, 0.897)" // 渐变色的起始颜色
+              },
+              {
+                offset: 0.8,
+                color: "rgba(1, 132, 213, 0.5)" // 渐变线的结束颜色
+              }
+            ],
+            false
+          ),
+          shadowColor: "rgba(0, 0, 0, 0.1)"
+        },
        
-//         symbol: "circle",
+        symbol: "circle",
         
-//         symbolSize: 8,
+        symbolSize: 8,
       
-//         showSymbol: false,
+        showSymbol: false,
     
-<<<<<<< HEAD
         itemStyle: {
           color: "#ee0e34",
           borderColor: "rgba(245, 41, 0, 0.897)",
@@ -484,8 +484,6 @@
           40
         ]
       },
-
-      
       {
         name: "Electricity",
         type: "line",
@@ -518,72 +516,59 @@
             shadowColor: "rgba(0, 0, 0, 0.1)"
           }
         },
-=======
-//         itemStyle: {
-//           color: "#ee0e34",
-//           borderColor: "rgba(245, 41, 0, 0.897)",
-//           borderWidth: 12
-//         },
-//         data: consumption,
-//       },
-//       {
-//         name: "Electricity",
-//         type: "line",
-//         smooth: true,
-//         lineStyle: {
-//           normal: {
-//             color: "#ee4e34",
-//             width: 2
-//           }
-//         },
-//         areaStyle: {
-//           normal: {
-//             color: new echarts.graphic.LinearGradient(
-//               0,
-//               0,
-//               0,
-//               1,
-//               [
-//                 {
-//                   offset: 0,
-//                   color: "rgba(245, 41, 0, 0.897)"
-//                 },
-//                 {
-//                   offset: 0.8,
-//                   color: "rgba(245, 41, 0, 0.5)"
-//                 }
-//               ],
-//               false
-//             ),
-//             shadowColor: "rgba(0, 0, 0, 0.1)"
-//           }
-//         },
->>>>>>> 812bf361f79fb976a828a5bd7845e0f7ba7a198e
        
-//         symbol: "circle",
+        symbol: "circle",
         
-//         symbolSize: 5,
+        symbolSize: 5,
         
-//         itemStyle: {
-//           color: "#00d887",
-//           borderColor: "rgba(245, 41, 0, 0.897)",
-//           borderWidth: 12
-//         },
+        itemStyle: {
+          color: "#00d887",
+          borderColor: "rgba(245, 41, 0, 0.897)",
+          borderWidth: 12
+        },
        
-//         showSymbol: false,
-//         data: ['1','2','3'],
-//       }
-//     ]
-//   };
-//   if (option && typeof option === "object") {
-//     myChart.setOption(option, true);
-// }
+        showSymbol: false,
+        data: [
+          130,
+          10,
+          20,
+          40,
+          30,
+          40,
+          80,
+          60,
+          20,
+          40,
+          90,
+          40,
+          20,
+          140,
+          30,
+          40,
+          130,
+          20,
+          20,
+          40,
+          80,
+          70,
+          30,
+          40,
+          30,
+          120,
+          20,
+          99,
+          50,
+          20
+        ]
+      }
+    ]
+  };
+  myChart.setOption(option);
  
-//   window.addEventListener("resize", function() {
-//     myChart.resize();
-//   });
-// })();
-
+  window.addEventListener("resize", function() {
+    myChart.resize();
+  });
+})();
 
 // Pie
 (function() {
@@ -695,9 +680,9 @@
           { value: 24, name: "Lille" },
           { value: 25, name: "Cherbourg" },
           { value: 20, name: "Rouen" },
-          { value: 25, name: "11" },
-          { value: 30, name: "33" },
-          { value: 42, name: "22" }
+          { value: 25, name: "Nancy" },
+          { value: 30, name: "Brest" },
+          { value: 42, name: "Orleans" }
         ]
       }
     ]
