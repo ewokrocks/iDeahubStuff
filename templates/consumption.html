@@ -6,13 +6,14 @@
     <script src="../static/js/echarts.min.js"></script>
     <script src="../static/js/jquery.js"></script>
     <link rel="stylesheet" href="../static/css/report.css" />
+    
 </head>
 <body>
     <!-- <div style="position: relative; overflow: hidden; width: 1538px; height: 760px; padding: 0px; margin: 0px; border-width: 0px; cursor: default;"> -->
     <div>
       <div class = "diagram" id="bar" style="height:400px">
       </div>
-      <div class = "diagram" id="bar" style="height:400px">
+      <div class = "diagram" id="bar1" style="height:400px">
       </div>
     </div>
     <script type="text/javascript">
@@ -31,7 +32,7 @@
                       for (var i = 0; i < result.length; i++) {
                           arr1.push(result[i].amount);
                           arr2.push(result[i].id);
-                          arr3.push(result[i].kg);   
+                          arr3.push(result[i].water);   
                       }
                     }
                   }
@@ -188,6 +189,184 @@
                 if (option && typeof option === "object") {
                       myChart.setOption(option, true);
                   }
-    </script>
+   
+
+
+
+
+              var  myChart = echarts.init(document.getElementById('bar1'));
+              var arr1=[],arr2=[],arr3=[];
+              function arrTest(){
+                
+                $.ajax({
+                  type:"post",
+                  async:false,
+                  url:"consumption.php",
+                  data:{},
+                  dataType:"json",
+                  success:function(result){
+                    if (result) {
+                      for (var i = 0; i < result.length; i++) {
+                          arr1.push(result[i].amount);
+                          arr2.push(result[i].id);
+                          arr3.push(result[i].water);   
+                      }
+                    }
+                  }
+                })
+                return arr1,arr2,arr3;
+              }
+              arrTest();
+              var  option = {
+              title : {
+                    text: 'Consumption of Electricity',
+                    x:'center',
+                    textStyle:{
+                        fontSize: 16,
+                        "color": "#ee4e34",
+                    }
+                
+                },
+
+              
+              tooltip: {
+                trigger:"axis"
+              },
+              
+              legend: {
+                top: "0%",
+                data: ["water","electricity"],
+                textStyle: {
+                     color: "rgba(245, 41, 0, 0.897)",
+                    fontSize: "12"
+      }
+              },
+             
+              grid: {
+                left: "10%",
+                top: "30",
+                right: "10%",
+                bottom: "10",
+                containLabel: true
+    },
+
+              toolbox: {
+                    show : true,
+                    feature : {
+                         dataView : {show: true, readOnly: false},
+                           magicType : {show: true, type: ['line', 'bar']},
+                           restore : {show: true},
+                           saveAsImage : {show: true}
+                        }
+              },
+                        calculable : true,
+              
+
+              xAxis : [
+              {
+              type : 'category',
+              data : arr2,
+              axisLabel: {
+              textStyle: {
+                color: "rgba(245, 41, 0, 0.897)",
+                fontSize: 12
+                }
+            },
+        
+            axisLine: {
+            lineStyle: {
+                color: "rgba(245, 41, 0, 0.897)"
+                }
+            }
+            }],
+              
+              yAxis : [
+              {
+                type : 'value',
+                type: "value",
+                axisTick: { show: false },
+                axisLine: {
+                lineStyle: {
+                    color: "rgba(245, 41, 0, 0.897)"
+                    }
+                },
+                axisLabel: {
+                textStyle: {
+                    color: "rgba(245, 41, 0, 0.897)",
+                    fontSize: 12
+                    }
+                },
+        
+                splitLine: {
+                lineStyle: {
+                    color: "rgba(245, 41, 0, 0.897)"
+                    }
+                 }
+                }
+              ],
+              
+              series : [
+               {
+               "name":"Water",
+               "type":"line",
+               smooth:true,
+
+               lineStyle: {
+                    color: "#ee4e34",
+                    width: "2"
+                },
+
+                areaStyle: {
+                    color: new echarts.graphic.LinearGradient(
+                        0,
+                        0,
+                        0,
+                        1,
+                        [
+                        {
+                             offset: 0,
+                             color: "rgba(245, 41, 0, 0.897)" // 渐变色的起始颜色
+                        },
+                        {
+                            offset: 0.8,
+                            color: "rgba(201,242,155,1)" // 渐变线的结束颜色
+                        }
+                        ],
+                        false
+                     ),
+                shadowColor: "rgba(0, 0, 0, 0.1)"
+                },
+                symbol:"circle",
+                symbolSize: 8,
+      
+                showSymbol: false,
+    
+                itemStyle: {
+                     color: "#ee0e34",
+                    borderColor: "rgba(245, 41, 0, 0.897)",
+                    borderWidth: 12
+                },
+
+                data:arr3,
+                markPoint : {
+                            data : [
+                            {type : 'max', name: 'MAXIMUN'},
+                            {type : 'min', name: 'MINIMUN'}
+                                    ]
+                                        },
+                            markLine : {
+                            data : [
+                            {type : 'average', name: 'AVERAGE'}
+                                   ]
+                                        }
+                        },
+                    ]
+                };
+                // 为echarts对象加载数据
+                if (option && typeof option === "object") {
+                      myChart.setOption(option, true);
+                  }
+                </script>  
+
 </body>
 </html>

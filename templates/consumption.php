@@ -16,13 +16,13 @@ $mysql_database='smarthome';
   class User{
     public $amount;
     public $id;
-    public $kg;
+    public $water;
   }
   while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
     $user=new User();
     $user->amount = $row['Consumption_amount'];
     $user->id= $row['DeviceDatald'];
-    $user->kg = $row['Day'];
+    $user->water = $row['Comsumption_water'];
     $array[]=$user;
   }
   $data=json_encode($array);

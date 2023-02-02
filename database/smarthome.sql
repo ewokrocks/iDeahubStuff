@@ -62,36 +62,38 @@ alter table `DeviceVersion` change idDeviceVersion idDeviceVersion int auto_incr
 
 alter table `DeviceData` change if exists Device_ID DeviceID int not null;
 
+alter table `DeviceData` add column if not exists `Comsumption_water` int not null;
 
-insert into devicedata(Comsumption_type,Day,Consumption_amount) value ('water','2022-12-1','15');
-insert into devicedata(Comsumption_type,Day,Consumption_amount) value ('water',2022-12-2,'30');
-insert into devicedata(Comsumption_type,Day,Consumption_amount) value ('water','2022-12-3','40');
-insert into devicedata(Comsumption_type,Day,Consumption_amount) value ('water','2022-12-4','55');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('water','2022-12-5','60');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('water','2022-12-6','79');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('water','2022-12-7','86');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('water','2022-12-8','90');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('water','2022-12-9','100');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('water','2022-12-10','187');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('water','2022-12-11','200');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('water','2022-12-12','230');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('water','2022-12-13','243');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('water','2022-12-14','267');
 
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-1','15');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-2','20');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-3','25');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-4','33');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-5','37');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-6','45');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-7','48');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-8','57');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-9','63');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-10','75');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-11','87');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-12','96');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-13','104');
--- insert into devicedata(Comsumption_type,Data,Consumption_amount) value ('electronic','2022-12-14','135');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-1','15','20');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-2','30','30');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-3','40','46');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-4','55','30');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-5','60','45');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-6','79','60');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-7','86','76');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-8','90','30');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-9','78','56');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-10','187','48');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-11','45','58');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-12','230','67');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-13','26','89');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-14','90','80');
+
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-1','15','30');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-2','20','60');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-3','25','58');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-4','33','78');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-5','37','54');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-6','45','57');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-7','63','89');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-8','57','36');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-9','26','89');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-10','75','57');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-11','87','49');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value (,'2022-12-12','96','80');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-13','58','60');
+insert into devicedata(Day,Consumption_amount,Comsumption_water) value ('2022-12-14','135','20');
 
 
 
